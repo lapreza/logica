@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 23 – Médias, faixas e classificação | Prof. Rafael Vainisckas Lapreza</title>
+    <link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <a href="../index.html" class="brand">
+                <span class="brand-tag">LOGICA-PROG</span>
+                <span>Lógica e Linguagem de Programação</span>
+            </a>
+            <div class="prof-badge">
+                Docente: <strong>Prof. Rafael Vainisckas Lapreza</strong>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cabeçalho da Semana -->
+    <section class="hero">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Navegação estrutural">
+                <a href="../index.html">Início</a>
+                <span>/</span>
+                <a href="index.html">4º Bimestre</a>
+                <span>/</span>
+                <strong>Semana 23 (S23)</strong>
+            </nav>
+
+            <span class="kicker">4º Bimestre &bull; Semana 23 (Aulas 09 a 12)</span>
+            <h1>Médias, faixas e classificação</h1>
+            <p class="hero-lead">
+                Nesta semana, você irá transformar critérios em regras de classificação, organizar cálculos de forma clara e reutilizável e aplicar médias para classificar dados, ampliando o projeto com a criação de rankings.
+            </p>
+
+            <!-- Índice rápido das 4 aulas da semana -->
+            <div class="indice-aulas">
+                <a href="#aula1" class="indice-link">
+                    <span>Aula 01</span>
+                    De critérios a regras de classificação
+                </a>
+                <a href="#aula2" class="indice-link">
+                    <span>Aula 02</span>
+                    Organizar cálculos reutilizáveis
+                </a>
+                <a href="#aula3" class="indice-link">
+                    <span>Aula 03</span>
+                    Calculando médias e classificando
+                </a>
+                <a href="#aula4" class="indice-link">
+                    <span>Aula 04</span>
+                    Ampliando com ranking
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo das 4 Aulas -->
+    <main class="bimestres-section">
+        <div class="container">
+
+            <!-- ================= AULA 1 ================= -->
+            <article id="aula1" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 23 &bull; Aula 01</span>
+                    <h2>De critérios a regras de classificação</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Muitos sistemas do mundo real precisam transformar números crus (como notas, pontuações de jogos ou temperaturas) em categorias qualitativas ou conceitos (como <em>Aprovado</em>, <em>Em Recuperação</em>, <em>Nível Iniciante</em> ou <em>Avançado</em>).
+                    </p>
+
+                    <h3>Mapeando Critérios em Estruturas Condicionais</h3>
+                    <p>
+                        Para programar essas regras, traduzimos as faixas numéricas em estruturas de decisão encadeadas (<code>se... senao se... senao</code>), garantindo que os limites não se sobreponham e cobrem todas as possibilidades de entrada.
+                    </p>
+                    <ul>
+                        <li><strong>Definição Clara de Limites:</strong> Evitar lacunas lógicas (por exemplo, o que acontece exatamente se a nota for <code>5.9</code>?).</li>
+                        <li><strong>Ordem das Condições:</strong> Em testes de faixas decrescentes ou crescentes, a ordem dos testes condicionais é determinante para evitar falsos positivos.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ================= AULA 2 ================= -->
+            <article id="aula2" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 23 &bull; Aula 02</span>
+                    <h2>Organizar o cálculo para ficar claro e reutilizável</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Quando um cálculo aritmético ou regra de negócio é repetido em vários pontos do código, o ideal é isolá-lo em uma <strong>função com retorno</strong>. Isso evita repetição de código e centraliza manutenções futuras.
+                    </p>
+
+                    <h3>Exemplo de Função de Cálculo Reutilizável</h3>
+<pre><code>// Função que calcula a média aritmética entre duas notas e retorna o valor
+funcao real calcularMedia(real nota1, real nota2) {
+    real media
+    media = (nota1 + nota2) / 2.0
+    retorne media
+}
+
+// Função que classifica o conceito com base na média recebida
+cadeia classificarConceito(real media) {
+    se (media &gt;= 7.0) {
+        retorne "Aprovado"
+    } senao se (media &gt;= 5.0) {
+        retorne "Em Recuperação"
+    } senao {
+        retorne "Reprovado"
+    }
+}</code></pre>
+                </div>
+            </article>
+
+            <!-- ================= AULA 3 ================= -->
+            <article id="aula3" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 23 &bull; Aula 03</span>
+                    <h2>Calculando médias e classificando no projeto</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Nesta aula, aplicamos as funções de cálculo de média e classificação diretamente aos cadastros armazenados em memória (como expandir o cadastro de alunos ou itens de desempenho do projeto).
+                    </p>
+
+                    <h3>Integrando o Cálculo ao Sistema</h3>
+                    <p>
+                        Ao listar cada registro cadastrado, o programa agora processa os dados numéricos em tempo de execução, exibindo não apenas os valores brutos, mas também o status correspondente gerado pelas regras de classificação.
+                    </p>
+                </div>
+            </article>
+
+            <!-- ================= AULA 4 ================= -->
+            <article id="aula4" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 23 &bull; Aula 04</span>
+                    <h2>Ampliando com ranking</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Para encerrar a semana, damos um passo além na manipulação de vetores: criamos uma rotina para ordenar os dados com base nas notas ou pontuações, gerando um <strong>ranking</strong> decrescente no terminal.
+                    </p>
+
+                    <h3>Lógica de Ordenação Simples (Bubble Sort Conceitual)</h3>
+                    <p>
+                        Comparamos elementos adjacentes do vetor e os permutamos caso estejam fora de ordem, permitindo ao sistema listar os melhores colocados do topo para a base.
+                    </p>
+
+                    <div class="callout-pratica">
+                        <strong>Atividade Prática &bull; Sistema de Médias e Ranking</strong>
+                        Implementar no projeto a rotina que calcula médias com base em dados informados pelo usuário, classifica cada registro em faixas predefinidas e exibe um ranking ordenado no terminal.
+                    </div>
+                </div>
+            </article>
+
+            <!-- Navegação Inferior entre Semanas -->
+            <nav class="navegacao-semanas" aria-label="Navegação entre semanas">
+                <a href="bim4-s22.html" class="nav-btn">&larr; Anterior: Semana 22</a>
+                <a href="index.html" class="nav-btn">Índice do 4º Bimestre</a>
+                <a href="bim4-s24.html" class="nav-btn">Próxima: Semana 24 &rarr;</a>
+            </nav>
+
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span>Lógica e Linguagem de Programação &bull; <strong>Prof. Rafael Vainisckas Lapreza</strong></span>
+            <span>4º Bimestre &bull; Semana 23</span>
+        </div>
+    </footer>
+
+</body>
+</html>

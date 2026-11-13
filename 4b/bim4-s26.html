@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 26 – Organizar e apresentar o projeto | Prof. Rafael Vainisckas Lapreza</title>
+    <link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <a href="../index.html" class="brand">
+                <span class="brand-tag">LOGICA-PROG</span>
+                <span>Lógica e Linguagem de Programação</span>
+            </a>
+            <div class="prof-badge">
+                Docente: <strong>Prof. Rafael Vainisckas Lapreza</strong>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cabeçalho da Semana -->
+    <section class="hero">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Navegação estrutural">
+                <a href="../index.html">Início</a>
+                <span>/</span>
+                <a href="index.html">4º Bimestre</a>
+                <span>/</span>
+                <strong>Semana 26 (S26)</strong>
+            </nav>
+
+            <span class="kicker">4º Bimestre &bull; Semana 26 (Aulas 21 a 24)</span>
+            <h1>Organizar e apresentar o projeto</h1>
+            <p class="hero-lead">
+                Nesta semana, você irá aprimorar a organização do código, aplicar funções e estruturas de repetição para tornar o projeto mais claro e compreensível e realizar testes e revisões para prepará-lo para a apresentação.
+            </p>
+
+            <!-- Índice rápido das 4 aulas da semana -->
+            <div class="indice-aulas">
+                <a href="#aula1" class="indice-link">
+                    <span>Aula 01</span>
+                    O que torna um programa fácil de entender
+                </a>
+                <a href="#aula2" class="indice-link">
+                    <span>Aula 02</span>
+                    Funções, repetição e organização
+                </a>
+                <a href="#aula3" class="indice-link">
+                    <span>Aula 03</span>
+                    Deixando o projeto mais claro
+                </a>
+                <a href="#aula4" class="indice-link">
+                    <span>Aula 04</span>
+                    Testes, revisão e apresentação
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo das 4 Aulas -->
+    <main class="bimestres-section">
+        <div class="container">
+
+            <!-- ================= AULA 1 ================= -->
+            <article id="aula1" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 26 &bull; Aula 01</span>
+                    <h2>O que torna um programa fácil de entender</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Um código limpo e legível não é importante apenas para o computador executá-lo corretamente, mas principalmente para que outros desenvolvedores (ou você mesmo no futuro) consigam compreender, corrigir e ampliar o sistema com facilidade.
+                    </p>
+
+                    <h3>Pilares da Legibilidade de Código</h3>
+                    <ul>
+                        <li><strong>Nomes Descritivos:</strong> Variáveis e funções devem ter nomes que expliquem claramente sua finalidade (por exemplo, usar <code>totalContatos</code> em vez de apenas <code>tc</code>).</li>
+                        <li><strong>Indentação Consistente:</strong> Respeitar a hierarquia de blocos e recuos visuais torna evidente onde cada estrutura de repetição ou decisão começa e termina.</li>
+                        <li><strong>Comentários Úteis:</strong> Inserir anotações explicativas em trechos complexos, evitando poluir o código com obviedades.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ================= AULA 2 ================= -->
+            <article id="aula2" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 26 &bull; Aula 02</span>
+                    <h2>Funções, repetição e organização do código</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        A aplicação sistemática de funções e laços de repetição elimina blocos repetidos de código (princípio DRY — <em>Don't Repeat Yourself</em>), concentrando a lógica em pontos únicos de manutenção.
+                    </p>
+
+                    <table class="tabela-tecnica">
+                        <thead>
+                            <tr>
+                                <th>Conceito de Organização</th>
+                                <th>Aplicação Prática</th>
+                                <th>Benefício Direto</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Modularização</strong></td>
+                                <td>Isolar menus, cadastros e relatórios em funções independentes.</td>
+                                <td>Facilita a leitura e isola a correção de bugs em módulos específicos.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Reutilização</strong></td>
+                                <td>Chamar a mesma função de validação de entrada em diferentes menus.</td>
+                                <td>Reduz o volume total de linhas de código e padroniza o comportamento.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+            <!-- ================= AULA 3 ================= -->
+            <article id="aula3" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 26 &bull; Aula 03</span>
+                    <h2>Deixando o projeto mais claro</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Nesta aula, realizamos um processo de refatoração guiada no minissistema desenvolvido ao longo do bimestre, limpando mensagens no terminal, padronizando o espaçamento das telas e garantindo que o fluxo de navegação seja intuitivo para qualquer usuário.
+                    </p>
+
+                    <h3>Ajustes de Experiência no Terminal</h3>
+                    <ul>
+                        <li><strong>Limpeza Visual:</strong> Uso de quebras de linha (<code>\n</code>) e separadores estilizados para delimitar claramente as seções do menu.</li>
+                        <li><strong>Mensagens Amigáveis:</strong> Retorno claro para ações bem-sucedidas ou entradas incorretas.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ================= AULA 4 ================= -->
+            <article id="aula4" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 26 &bull; Aula 04</span>
+                    <h2>Testes, revisão em pares e apresentação</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Para encerrar o 4º bimestre e o ciclo da disciplina, realizamos uma bateria final de testes funcionais, validação cruzada em duplas (revisão em pares) e a preparação para a apresentação do sistema final.
+                    </p>
+
+                    <div class="callout-pratica">
+                        <strong>Fechamento do 4º Bimestre &bull; Apresentação do Projeto Integrador</strong>
+                        Demonstrar o funcionamento do minissistema completo no terminal, cobrindo a navegação por menus, o cadastro e consulta em memória, os cálculos estatísticos e a robustez diante de entradas inválidas.
+                    </div>
+                </div>
+            </article>
+
+            <!-- Navegação Inferior entre Semanas -->
+            <nav class="navegacao-semanas" aria-label="Navegação entre semanas">
+                <a href="bim4-s25.html" class="nav-btn">&larr; Anterior: Semana 25</a>
+                <a href="index.html" class="nav-btn">Índice do 4º Bimestre</a>
+                <a href="../index.html" class="nav-btn">Início Geral &rarr;</a>
+            </nav>
+
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span>Lógica e Linguagem de Programação &bull; <strong>Prof. Rafael Vainisckas Lapreza</strong></span>
+            <span>4º Bimestre &bull; Semana 26</span>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 21 – Programando com menu no terminal | Prof. Rafael Vainisckas Lapreza</title>
+    <link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <a href="../index.html" class="brand">
+                <span class="brand-tag">LOGICA-PROG</span>
+                <span>Lógica e Linguagem de Programação</span>
+            </a>
+            <div class="prof-badge">
+                Docente: <strong>Prof. Rafael Vainisckas Lapreza</strong>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cabeçalho da Semana -->
+    <section class="hero">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Navegação estrutural">
+                <a href="../index.html">Início</a>
+                <span>/</span>
+                <a href="index.html">4º Bimestre</a>
+                <span>/</span>
+                <strong>Semana 21 (S21)</strong>
+            </nav>
+
+            <span class="kicker">4º Bimestre &bull; Semana 21 (Aulas 01 a 04)</span>
+            <h1>Programando com menu no terminal</h1>
+            <p class="hero-lead">
+                Nesta semana, você vai aprender a criar menus no terminal, organizar o código com funções, validar entradas e construir, passo a passo, um menu funcional, ampliando o projeto com a primeira opção executável.
+            </p>
+
+            <!-- Índice rápido das 4 aulas da semana -->
+            <div class="indice-aulas">
+                <a href="#aula1" class="indice-link">
+                    <span>Aula 01</span>
+                    Como um programa com menu se organiza
+                </a>
+                <a href="#aula2" class="indice-link">
+                    <span>Aula 02</span>
+                    Funções e validação de entradas
+                </a>
+                <a href="#aula3" class="indice-link">
+                    <span>Aula 03</span>
+                    Construindo o menu do projeto
+                </a>
+                <a href="#aula4" class="indice-link">
+                    <span>Aula 04</span>
+                    Ampliando o menu com a 1ª opção
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo das 4 Aulas -->
+    <main class="bimestres-section">
+        <div class="container">
+
+            <!-- ================= AULA 1 ================= -->
+            <article id="aula1" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 21 &bull; Aula 01</span>
+                    <h2>Como um programa com menu se organiza</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Até agora, criamos programas sequenciais que executavam de cima para baixo e encerravam em seguida. Sistemas reais, no entanto, precisam permanecer ativos permitindo que o usuário escolha o que deseja fazer repetidas vezes.
+                    </p>
+
+                    <h3>A Estrutura de Ciclo e Escolha</h3>
+                    <div class="fluxo-diagrama">
+                        <strong>[Início]</strong> &rarr; <span>Exibir Opções do Menu</span> &rarr; <span>Ler Escolha do Usuário</span> &rarr; <span>Decidir (Escolha == Sair?)</span> &rarr; <strong>[Fim / Repetir]</strong>
+                    </div>
+
+                    <ul>
+                        <li><strong>Laço de Repetição (Loop):</strong> Garante que o menu seja reexibido após cada operação concluída, encerrando apenas quando o usuário digitar a opção de saída (por exemplo, <code>0</code> ou <code>Sair</code>).</li>
+                        <li><strong>Decisão (Switch/Case ou If/Else Aninhado):</strong> Direciona o fluxo do programa para a rotina específica correspondente à opção escolhida.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ================= AULA 2 ================= -->
+            <article id="aula2" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 21 &bull; Aula 02</span>
+                    <h2>Por que usar funções e validar entradas</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Colocar todo o código de um sistema dentro do programa principal (como o bloco <code>main</code>) gera um código confuso e difícil de manter. A divisão em <strong>funções</strong> isola responsabilidades.
+                    </p>
+
+                    <h3>Vantagens da Modularização e Validação</h3>
+                    <ul>
+                        <li><strong>Funções Especializadas:</strong> Cada função deve executar uma única tarefa clara (ex.: <code>exibirCabecalho()</code>, <code>lerOpcaoMenu()</code>, <code>validarNumero()</code>).</li>
+                        <li><strong>Tratamento de Entradas Inválidas:</strong> O usuário pode digitar letras quando o sistema espera um número, ou escolher uma opção inexistente (ex: digitar <code>9</code> em um menu de <code>1</code> a <code>3</code>). Validar a entrada impede que o programa feche com erro inesperado.</li>
+                    </ul>
+
+<pre><code>// Exemplo em Portugol / Lógica estruturada
+funcao inteiro lerOpcaoValida() {
+    inteiro opcao
+    faca {
+        escreva("\nDigite sua opção: ")
+        leia(opcao)
+        se (opcao &lt; 0 ou opcao &gt; 3) {
+            escreva("Opção inválida! Tente novamente.")
+        }
+    } enquanto (opcao &lt; 0 ou opcao &gt; 3)
+    retorne opcao
+}</code></pre>
+                </div>
+            </article>
+
+            <!-- ================= AULA 3 ================= -->
+            <article id="aula3" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 21 &bull; Aula 03</span>
+                    <h2>Construindo o menu do projeto</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Nesta aula, iniciamos a estrutura base do projeto do 4º bimestre, integrando o laço de repetição com a exibição limpa das opções disponíveis no terminal.
+                    </p>
+
+                    <h3>Esqueleto Base do Sistema</h3>
+<pre><code>// Estrutura principal do projeto no terminal
+inteiro opcao = -1
+
+faca {
+    escreva("\n============================")
+    escreva("\n   SISTEMA DE GERENCIAMENTO  ")
+    escreva("\n============================")
+    escreva("\n1. Executar Primeira Opção")
+    escreva("\n2. Opção Futura (Em breve)")
+    escreva("\n3. Opção Futura (Em breve)")
+    escreva("\n0. Sair do Sistema")
+    escreva("\n----------------------------")
+    
+    opcao = lerOpcaoValida()
+
+    escolha (opcao) {
+        caso 1:
+            escreva("\n-> Executando a Opção 1...\n")
+            // Chamada da função específica aqui
+            pare
+        caso 2:
+        caso 3:
+            escreva("\n[Aviso] Funcionalidade em desenvolvimento.\n")
+            pare
+        caso 0:
+            escreva("\nEncerrando o sistema. Até logo!\n")
+            pare
+        caso contrario:
+            escreva("\n[Erro] Opção desconhecida.\n")
+    }
+} enquanto (opcao != 0)</code></pre>
+                </div>
+            </article>
+
+            <!-- ================= AULA 4 ================= -->
+            <article id="aula4" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 21 &bull; Aula 04</span>
+                    <h2>Ampliando o menu com a primeira opção executável</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Vamos transformar a opção <code>1</code> do nosso menu em uma rotina real e funcional, aplicando parâmetros, variáveis locais e retorno de dados.
+                    </p>
+
+                    <h3>Implementando a Funcionalidade Inicial</h3>
+                    <p>
+                        A primeira opção executável do projeto funcionará como um módulo de saudação personalizada ou cálculo rápido integrado ao menu principal, demonstrando a passagem de controle entre o laço principal e a função dedicada.
+                    </p>
+
+                    <div class="callout-pratica">
+                        <strong>Atividade Prática &bull; Menu Funcional no Terminal</strong>
+                        Escrever o programa completo no ambiente de testes escolhido, garantindo que o menu se repita corretamente até que o usuário digite <code>0</code>, e testando se a opção <code>1</code> executa a rotina programada sem interromper o ciclo principal.
+                    </div>
+                </div>
+            </article>
+
+            <!-- Navegação Inferior entre Semanas -->
+            <nav class="navegacao-semanas" aria-label="Navegação entre semanas">
+                <a href="index.html" class="nav-btn">&larr; Índice do 4º Bimestre</a>
+                <a href="bim4-s22.html" class="nav-btn">Próxima: Semana 22 &rarr;</a>
+            </nav>
+
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span>Lógica e Linguagem de Programação &bull; <strong>Prof. Rafael Vainisckas Lapreza</strong></span>
+            <span>4º Bimestre &bull; Semana 21</span>
+        </div>
+    </footer>
+
+</body>
+</html>

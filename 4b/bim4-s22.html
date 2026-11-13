@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 22 – Agenda e cadastros em memória | Prof. Rafael Vainisckas Lapreza</title>
+    <link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <a href="../index.html" class="brand">
+                <span class="brand-tag">LOGICA-PROG</span>
+                <span>Lógica e Linguagem de Programação</span>
+            </a>
+            <div class="prof-badge">
+                Docente: <strong>Prof. Rafael Vainisckas Lapreza</strong>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cabeçalho da Semana -->
+    <section class="hero">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Navegação estrutural">
+                <a href="../index.html">Início</a>
+                <span>/</span>
+                <a href="index.html">4º Bimestre</a>
+                <span>/</span>
+                <strong>Semana 22 (S22)</strong>
+            </nav>
+
+            <span class="kicker">4º Bimestre &bull; Semana 22 (Aulas 05 a 08)</span>
+            <h1>Agenda e cadastros em memória</h1>
+            <p class="hero-lead">
+                Nesta semana, você vai aprender a armazenar dados em memória e desenvolver as principais operações de um cadastro: incluir, consultar e listar informações, aplicando esses conceitos ao projeto de uma agenda.
+            </p>
+
+            <!-- Índice rápido das 4 aulas da semana -->
+            <div class="indice-aulas">
+                <a href="#aula1" class="indice-link">
+                    <span>Aula 01</span>
+                    Como guardar dados sem usar arquivo
+                </a>
+                <a href="#aula2" class="indice-link">
+                    <span>Aula 02</span>
+                    Incluir, consultar e listar: a lógica
+                </a>
+                <a href="#aula3" class="indice-link">
+                    <span>Aula 03</span>
+                    Cadastrando e consultando no projeto
+                </a>
+                <a href="#aula4" class="indice-link">
+                    <span>Aula 04</span>
+                    Ampliando o cadastro com listagem
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo das 4 Aulas -->
+    <main class="bimestres-section">
+        <div class="container">
+
+            <!-- ================= AULA 1 ================= -->
+            <article id="aula1" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 22 &bull; Aula 01</span>
+                    <h2>Como guardar dados sem usar arquivo</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Até o momento, nossas variáveis comuns guardavam apenas um valor por vez (por exemplo, um único nome ou um único número), que era substituído assim que uma nova entrada era realizada. Para gerenciar múltiplos registros (como vários contatos em uma agenda), utilizamos estruturas de dados em memória RAM: <strong>Vetores (Arrays)</strong> ou <strong>Listas Paralelas</strong>.
+                    </p>
+
+                    <h3>Organização com Vetores Paralelos</h3>
+                    <div class="fluxo-diagrama">
+                        <strong>[Índice 0]</strong> &rarr; <span>Nome: Ana</span> | <span>Telefone: 9991-2345</span> <br>
+                        <strong>[Índice 1]</strong> &rarr; <span>Nome: Carlos</span> | <span>Telefone: 9882-5678</span> <br>
+                        <strong>[Índice 2]</strong> &rarr; <span>Nome: Beatriz</span> | <span>Telefone: 9773-9012</span>
+                    </div>
+
+                    <ul>
+                        <li><strong>Controle de Posição (Contador / Ponteiro):</strong> Precisamos de uma variável inteira (ex: <code>totalCadastrados</code>) que indique quantas posições do vetor estão realmente ocupadas em um dado momento.</li>
+                        <li><strong>Vantagem e Limitação:</strong> O acesso em memória é extremamente rápido, mas os dados armazenados são voláteis — ou seja, são apagados assim que o programa é fechado.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ================= AULA 2 ================= -->
+            <article id="aula2" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 22 &bull; Aula 02</span>
+                    <h2>Incluir, consultar e listar: a lógica por trás</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Todo sistema de cadastro básico é composto por três operações essenciais que operam diretamente sobre os vetores em memória:
+                    </p>
+
+                    <table class="tabela-tecnica">
+                        <thead>
+                            <tr>
+                                <th>Operação</th>
+                                <th>Lógica de Funcionamento</th>
+                                <th>Cuidados Necessários</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Incluir (Inserir)</strong></td>
+                                <td>Armazena os dados digitados na próxima posição disponível do vetor e incrementa o contador.</td>
+                                <td>Verificar se o vetor atingiu sua capacidade máxima (estouro de limite).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Consultar (Buscar)</strong></td>
+                                <td>Percorre o vetor com um laço de repetição comparando o termo buscado com os dados armazenados.</td>
+                                <td>Tratar o caso em que o registro não é encontrado (retornar aviso claro).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Listar (Exibir Todos)</strong></td>
+                                <td>Utiliza um laço (como <code>para</code>) de 0 até o limite do contador para mostrar todos os registros salvos.</td>
+                                <td>Verificar se o cadastro está vazio antes de tentar exibir a listagem.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+            <!-- ================= AULA 3 ================= -->
+            <article id="aula3" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 22 &bull; Aula 03</span>
+                    <h2>Cadastrando e consultando no projeto</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Nesta aula, implementamos as funções de inclusão e busca por nome na nossa agenda de contatos integrada ao menu terminal da semana anterior.
+                    </p>
+
+                    <h3>Exemplo de Lógica em Código</h3>
+<pre><code>// Estrutura de dados em memória para a Agenda
+const inteiro MAX_CONTATOS = 50
+cadeia nomes[MAX_CONTATOS]
+cadeia telefones[MAX_CONTATOS]
+inteiro totalContatos = 0
+
+funcao incluirContato() {
+    se (totalContatos &lt; MAX_CONTATOS) {
+        escreva("\n--- NOVO CONTATO ---")
+        escreva("\nDigite o nome: ")
+        leia(nomes[totalContatos])
+        escreva("Digite o telefone: ")
+        leia(telefones[totalContatos])
+        
+        totalContatos++
+        escreva("\n[Sucesso] Contato cadastrado com sucesso!\n")
+    } senao {
+        escreva("\n[Erro] Agenda cheia! Limite máximo atingido.\n")
+    }
+}
+
+funcao consultarContato() {
+    cadeia busca
+    logico encontrado = falso
+    
+    escreva("\nDigite o nome que deseja buscar: ")
+    leia(busca)
+    
+    para (inteiro i = 0; i &lt; totalContatos; i++) {
+        se (nomes[i] == busca) {
+            escreva("\nEncontrado na posição ", i + 1)
+            escreva("\nNome: ", nomes[i])
+            escreva("\nTelefone: ", telefones[i], "\n")
+            encontrado = verdadeiro
+            pare
+        }
+    }
+    
+    se (!encontrado) {
+        escreva("\n[Aviso] Nenhum contato encontrado com o nome '", busca, "'.\n")
+    }
+}</code></pre>
+                </div>
+            </article>
+
+            <!-- ================= AULA 4 ================= -->
+            <article id="aula4" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 22 &bull; Aula 04</span>
+                    <h2>Ampliando o cadastro com listagem</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Para encerrar a semana, adicionamos a opção de listagem geral de todos os contatos salvos e integramos todas as operações (Incluir, Consultar, Listar e Sair) dentro do menu principal do sistema.
+                    </p>
+
+                    <h3>Rotina de Listagem Geral</h3>
+<pre><code>funcao listarContatos() {
+    se (totalContatos == 0) {
+        escreva("\n[Aviso] A agenda está vazia no momento.\n")
+    } senao {
+        escreva("\n==================================")
+        escreva("\n          LISTA DE CONTATOS       ")
+        escreva("\n==================================")
+        para (inteiro i = 0; i &lt; totalContatos; i++) {
+            escreva("\n[", i + 1, "] Nome: ", nomes[i], " | Tel: ", telefones[i])
+        }
+        escreva("\n----------------------------------")
+        escreva("\nTotal de contatos: ", totalContatos, "\n")
+    }
+}</code></pre>
+
+                    <div class="callout-pratica">
+                        <strong>Atividade Prática &bull; Agenda de Contatos Completa</strong>
+                        Montar o programa completo combinando o menu interativo com os vetores de nomes e telefones, testando se a inserção incrementa o contador corretamente e se a listagem exibe todos os registros salvos em memória.
+                    </div>
+                </div>
+            </article>
+
+            <!-- Navegação Inferior entre Semanas -->
+            <nav class="navegacao-semanas" aria-label="Navegação entre semanas">
+                <a href="bim4-s21.html" class="nav-btn">&larr; Anterior: Semana 21</a>
+                <a href="index.html" class="nav-btn">Índice do 4º Bimestre</a>
+                <a href="bim4-s23.html" class="nav-btn">Próxima: Semana 23 &rarr;</a>
+            </nav>
+
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span>Lógica e Linguagem de Programação &bull; <strong>Prof. Rafael Vainisckas Lapreza</strong></span>
+            <span>4º Bimestre &bull; Semana 22</span>
+        </div>
+    </footer>
+
+</body>
+</html>

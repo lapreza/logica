@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 25 – Do menu ao sistema completo | Prof. Rafael Vainisckas Lapreza</title>
+    <link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <a href="../index.html" class="brand">
+                <span class="brand-tag">LOGICA-PROG</span>
+                <span>Lógica e Linguagem de Programação</span>
+            </a>
+            <div class="prof-badge">
+                Docente: <strong>Prof. Rafael Vainisckas Lapreza</strong>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cabeçalho da Semana -->
+    <section class="hero">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Navegação estrutural">
+                <a href="../index.html">Início</a>
+                <span>/</span>
+                <a href="index.html">4º Bimestre</a>
+                <span>/</span>
+                <strong>Semana 25 (S25)</strong>
+            </nav>
+
+            <span class="kicker">4º Bimestre &bull; Semana 25 (Aulas 17 a 20)</span>
+            <h1>Do menu ao sistema completo</h1>
+            <p class="hero-lead">
+                Nesta semana, você irá compreender como um sistema pode ser organizado em partes, identificar o papel dos dados e das funções e aplicar esses conhecimentos na construção e ampliação de um mini sistema.
+            </p>
+
+            <!-- Índice rápido das 4 aulas da semana -->
+            <div class="indice-aulas">
+                <a href="#aula1" class="indice-link">
+                    <span>Aula 01</span>
+                    Enxergando o sistema por partes
+                </a>
+                <a href="#aula2" class="indice-link">
+                    <span>Aula 02</span>
+                    Quem faz o quê: dados e funções
+                </a>
+                <a href="#aula3" class="indice-link">
+                    <span>Aula 03</span>
+                    Montando o minissistema
+                </a>
+                <a href="#aula4" class="indice-link">
+                    <span>Aula 04</span>
+                    Completando as opções
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo das 4 Aulas -->
+    <main class="bimestres-section">
+        <div class="container">
+
+            <!-- ================= AULA 1 ================= -->
+            <article id="aula1" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 25 &bull; Aula 01</span>
+                    <h2>Enxergando o sistema por partes</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        À medida que os programas crescem, escrever todo o código em um único bloco contínuo torna-se inviável. Um software profissional é concebido de forma modular, dividido em subsistemas ou módulos independentes que cooperam entre si.
+                    </p>
+
+                    <h3>A Abordagem Modular</h3>
+                    <div class="fluxo-diagrama">
+                        <strong>[Menu Principal]</strong> &rarr; <span>Módulo de Cadastros</span> | <span>Módulo de Consultas</span> | <span>Módulo de Relatórios/Cálculos</span>
+                    </div>
+
+                    <ul>
+                        <li><strong>Divisão de Responsabilidades:</strong> Cada parte do sistema resolve um problema específico, facilitando a identificação de erros e a implementação de melhorias.</li>
+                        <li><strong>Escalabilidade:</strong> Adicionar uma nova funcionalidade passa a exigir apenas a criação de um novo módulo, sem que seja necessário reescrever a lógica existente.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ================= AULA 2 ================= -->
+            <article id="aula2" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 25 &bull; Aula 02</span>
+                    <h2>Quem faz o quê: dados e funções</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Para estruturar um minissistema integrado, é fundamental separar claramente o armazenamento de informações (os <strong>dados</strong> nos vetores) das regras de processamento (as <strong>funções</strong>).
+                    </p>
+
+                    <table class="tabela-tecnica">
+                        <thead>
+                            <tr>
+                                <th>Camada do Sistema</th>
+                                <th>Elementos Principais</th>
+                                <th>Responsabilidade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Estrutura de Dados</strong></td>
+                                <td>Vetores globais ou locais (ex: nomes, valores, status).</td>
+                                <td>Guardar o estado e o histórico das informações em memória RAM.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Processamento (Funções)</strong></td>
+                                <td>Rotinas de cálculo, validação, inserção e exibição.</td>
+                                <td>Manipular os dados aplicando as regras de negócio do sistema.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+            <!-- ================= AULA 3 ================= -->
+            <article id="aula3" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 25 &bull; Aula 03</span>
+                    <h2>Montando o minissistema</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Nesta aula, unificamos os conceitos aprendidos ao longo do bimestre — menus interativos no terminal, cadastros em memória com vetores e regras de cálculo e classificação — estruturando a base central do minissistema integrado.
+                    </p>
+
+                    <h3>Arquitetura do Minissistema</h3>
+<pre><code>// Esqueleto geral integrando o Menu Principal às Funções Especializadas
+funcao inicio() {
+    inteiro opcao = -1
+    
+    faca {
+        escreva("\n==================================")
+        escreva("\n      MINISSISTEMA INTEGRADO      ")
+        escreva("\n==================================")
+        escreva("\n1. Gerenciar Cadastros")
+        escreva("\n2. Executar Cálculos e Relatórios")
+        escreva("\n3. Central de Desafios / Quiz")
+        escreva("\n0. Sair do Programa")
+        escreva("\n----------------------------------")
+        escreva("\nEscolha sua opção: ")
+        leia(opcao)
+
+        escolha (opcao) {
+            caso 1: menuCadastros() pare
+            caso 2: menuRelatorios() pare
+            caso 3: menuQuiz() pare
+            caso 0: escreva("\nEncerrando o minissistema...\n") pare
+            caso contrario: escreva("\n[Erro] Opção inválida!\n")
+        }
+    } enquanto (opcao != 0)
+}</code></pre>
+                </div>
+            </article>
+
+            <!-- ================= AULA 4 ================= -->
+            <article id="aula4" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 25 &bull; Aula 04</span>
+                    <h2>Completando as opções do sistema</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Para concluir a semana, preenchemos todas as ramificações pendentes do menu, garantindo que cada opção leve a uma rotina totalmente executável e integrada aos dados do sistema.
+                    </p>
+
+                    <div class="callout-pratica">
+                        <strong>Atividade Prática &bull; Integração do Minissistema</strong>
+                        Conectar os módulos desenvolvidos nas semanas anteriores (agenda, cálculos de média e quiz) sob um único menu principal hierárquico, validando o fluxo completo de navegação e operação.
+                    </div>
+                </div>
+            </article>
+
+            <!-- Navegação Inferior entre Semanas -->
+            <nav class="navegacao-semanas" aria-label="Navegação entre semanas">
+                <a href="bim4-s24.html" class="nav-btn">&larr; Anterior: Semana 24</a>
+                <a href="index.html" class="nav-btn">Índice do 4º Bimestre</a>
+                <a href="bim4-s26.html" class="nav-btn">Próxima: Semana 26 &rarr;</a>
+            </nav>
+
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span>Lógica e Linguagem de Programação &bull; <strong>Prof. Rafael Vainisckas Lapreza</strong></span>
+            <span>4º Bimestre &bull; Semana 25</span>
+        </div>
+    </footer>
+
+</body>
+</html>

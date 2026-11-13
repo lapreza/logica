@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 24 – Quiz e desafios no terminal | Prof. Rafael Vainisckas Lapreza</title>
+    <link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <a href="../index.html" class="brand">
+                <span class="brand-tag">LOGICA-PROG</span>
+                <span>Lógica e Linguagem de Programação</span>
+            </a>
+            <div class="prof-badge">
+                Docente: <strong>Prof. Rafael Vainisckas Lapreza</strong>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cabeçalho da Semana -->
+    <section class="hero">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Navegação estrutural">
+                <a href="../index.html">Início</a>
+                <span>/</span>
+                <a href="index.html">4º Bimestre</a>
+                <span>/</span>
+                <strong>Semana 24 (S24)</strong>
+            </nav>
+
+            <span class="kicker">4º Bimestre &bull; Semana 24 (Aulas 13 a 16)</span>
+            <h1>Quiz e desafios no terminal</h1>
+            <p class="hero-lead">
+                Nesta semana, você vai aprender a criar um quiz interativo no terminal, trabalhando com perguntas, tentativas, rodadas e pontuação. Ao final, vai ampliar o projeto com um quiz temático.
+            </p>
+
+            <!-- Índice rápido das 4 aulas da semana -->
+            <div class="indice-aulas">
+                <a href="#aula1" class="indice-link">
+                    <span>Aula 01</span>
+                    Como funciona um programa interativo
+                </a>
+                <a href="#aula2" class="indice-link">
+                    <span>Aula 02</span>
+                    Perguntas, tentativas e pontuação
+                </a>
+                <a href="#aula3" class="indice-link">
+                    <span>Aula 03</span>
+                    Programando rodadas e pontuação
+                </a>
+                <a href="#aula4" class="indice-link">
+                    <span>Aula 04</span>
+                    Ampliando com o quiz temático
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo das 4 Aulas -->
+    <main class="bimestres-section">
+        <div class="container">
+
+            <!-- ================= AULA 1 ================= -->
+            <article id="aula1" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 24 &bull; Aula 01</span>
+                    <h2>Como funciona um programa interativo</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Programas interativos exigem uma troca contínua de mensagens entre o usuário e a máquina. Diferente de um cadastro passivo, o quiz responde imediatamente a cada escolha, alterando o fluxo com base no acerto ou erro.
+                    </p>
+
+                    <h3>A Dinâmica de Ação e Reação</h3>
+                    <div class="fluxo-diagrama">
+                        <strong>[Exibe Pergunta]</strong> &rarr; <span>Lê Resposta do Usuário</span> &rarr; <span>Compara com o Gabarito</span> &rarr; <strong>[Atualiza Pontuação / Feedback]</strong>
+                    </div>
+
+                    <ul>
+                        <li><strong>Estado Dinâmico:</strong> Variáveis de controle (como <code>pontos</code> e <code>tentativas</code>) são modificadas a cada rodada.</li>
+                        <li><strong>Validação de Resposta:</strong> Garantir que o usuário digite apenas opções válidas (por exemplo, alternativas <code>A</code>, <code>B</code>, <code>C</code>, <code>D</code> ou números equivalentes).</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ================= AULA 2 ================= -->
+            <article id="aula2" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 24 &bull; Aula 02</span>
+                    <h2>Perguntas, tentativas e pontuação</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Para estructurar um jogo de perguntas e respostas robusto, organizamos vetores paralelos contendo os enunciados, as alternativas e a resposta correta de cada questão.
+                    </p>
+
+                    <table class="tabela-tecnica">
+                        <thead>
+                            <tr>
+                                <th>Componente do Quiz</th>
+                                <th>Tipo de Dado</th>
+                                <th>Finalidade no Programa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Enunciados</strong></td>
+                                <td>Vetor de <code>cadeia</code></td>
+                                <td>Armazena o texto da pergunta exibida ao jogador.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Gabarito</strong></td>
+                                <td>Vetor de <code>inteiro</code> ou <code>caractere</code></td>
+                                <td>Guarda a alternativa correta para validação automática.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Pontuação</strong></td>
+                                <td>Variável inteira (<code>pontos</code>)</td>
+                                <td>Acumula os pontos a cada resposta certa.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+            <!-- ================= AULA 3 ================= -->
+            <article id="aula3" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 24 &bull; Aula 03</span>
+                    <h2>Programando rodadas e pontuação no projeto</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Nesta aula, implementamos a estrutura de repetição (como um laço <code>para</code>) que percorre o vetor de perguntas, gerencia as rodadas sequencialmente e soma pontos ao placar geral.
+                    </p>
+
+                    <h3>Exemplo de Lógica do Quiz em Código</h3>
+<pre><code>// Estrutura de rodadas de um Quiz
+inteiro pontos = 0
+cadeia respostaUsuario
+
+escreva("\n==================================")
+escreva("\n         DESAFIO DE LÓGICA        ")
+escreva("\n==================================")
+
+// Pergunta 1
+escreva("\n1. Qual símbolo representa a estrutura de decisão condicional básica?\n")
+escreva("a) enquanto\n")
+escreva("b) se\n")
+escreva("c) para\n")
+escreva("Sua resposta: ")
+leia(respostaUsuario)
+
+se (respostaUsuario == "b" ou respostaUsuario == "B") {
+    escreva("-> Resposta Correta! +10 pontos.\n")
+    pontos = pontos + 10
+} senao {
+    escreva("-> Resposta Incorreta. A resposta certa era 'b'.\n")
+}
+
+escreva("\nPontuação atual: ", pontos, " pontos.\n")</code></pre>
+                </div>
+            </article>
+
+            <!-- ================= AULA 4 ================= -->
+            <article id="aula4" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 24 &bull; Aula 04</span>
+                    <h2>Ampliando com o quiz temático</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Para finalizar a semana, expandimos o sistema criando um <strong>Quiz Temático</strong> (focado em tecnologia, história ou conhecimentos gerais), integrando vetores de perguntas maiores e exibindo um relatório final de desempenho com classificação baseada na pontuação obtida.
+                    </p>
+
+                    <div class="callout-pratica">
+                        <strong>Atividade Prática &bull; Jogo Quiz Interativo</strong>
+                        Desenvolver um programa de perguntas e respostas no terminal utilizando laços de repetição, contagem de pontos e exibição de uma mensagem personalizada de desempenho ao término das rodadas.
+                    </div>
+                </div>
+            </article>
+
+            <!-- Navegação Inferior entre Semanas -->
+            <nav class="navegacao-semanas" aria-label="Navegação entre semanas">
+                <a href="bim4-s23.html" class="nav-btn">&larr; Anterior: Semana 23</a>
+                <a href="index.html" class="nav-btn">Índice do 4º Bimestre</a>
+                <a href="bim4-s25.html" class="nav-btn">Próxima: Semana 25 &rarr;</a>
+            </nav>
+
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span>Lógica e Linguagem de Programação &bull; <strong>Prof. Rafael Vainisckas Lapreza</strong></span>
+            <span>4º Bimestre &bull; Semana 24</span>
+        </div>
+    </footer>
+
+</body>
+</html>
