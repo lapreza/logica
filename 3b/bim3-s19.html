@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 19 – Manipulação de strings | Prof. Rafael Vainisckas Lapreza</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <a href="index.html" class="brand">
+                <span class="brand-tag">LOGICA-PROG</span>
+                <span>Lógica e Linguagem de Programação</span>
+            </a>
+            <div class="prof-badge">
+                Docente: <strong>Prof. Rafael Vainisckas Lapreza</strong>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cabeçalho da Semana -->
+    <section class="hero">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Navegação estrutural">
+                <a href="index.html">Início</a>
+                <span>/</span>
+                <a href="index.html">3º Bimestre</a>
+                <span>/</span>
+                <strong>Semana 19 (S19)</strong>
+            </nav>
+
+            <span class="kicker">3º Bimestre &bull; Semana 19 (Aulas 17 a 20)</span>
+            <h1>Manipulação de strings</h1>
+            <p class="hero-lead">
+                Nesta semana você irá reconhecer as propriedades essenciais de "strings" para aplicar métodos de busca, substituição e formatação, habilidades cruciais para manipular e analisar dados textuais.
+            </p>
+
+            <!-- Índice rápido das 4 aulas da semana -->
+            <div class="indice-aulas">
+                <a href="#aula1" class="indice-link">
+                    <span>Aula 01</span>
+                    Revisão do tipo string e imutabilidade
+                </a>
+                <a href="#aula2" class="indice-link">
+                    <span>Aula 02</span>
+                    Métodos de busca e substituição
+                </a>
+                <a href="#aula3" class="indice-link">
+                    <span>Aula 03</span>
+                    Slicing e formatação com fstrings
+                </a>
+                <a href="#aula4" class="indice-link">
+                    <span>Aula 04</span>
+                    Parsing de logs
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo das 4 Aulas -->
+    <main class="bimestres-section">
+        <div class="container">
+
+            <!-- ================= AULA 1 ================= -->
+            <article id="aula1" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 19 &bull; Aula 01</span>
+                    <h2>Revisão do tipo string e imutabilidade</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        As cadeias de caracteres (strings) representam dados textuais fundamentais em qualquer sistema. O entendimento de sua estrutura interna e comportamento é o primeiro passo para o processamento de textos[cite: 2].
+                    </p>
+
+                    <h3>Conceitos Fundamentais</h3>
+                    <ul>
+                        <li><strong>Imutabilidade:</strong> Uma vez criada, o conteúdo de uma string não pode ser alterado diretamente em seu espaço de memória original; operações de modificação geram novas instâncias.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ================= AULA 2 ================= -->
+            <article id="aula2" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 19 &bull; Aula 02</span>
+                    <h2>Métodos de busca e substituição</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Linguagens de programação modernas oferecem nativamente uma série de métodos utilitários para localizar substrings, verificar prefixos/sufixos e trocar partes de um texto[cite: 2].
+                    </p>
+
+                    <table class="tabela-tecnica">
+                        <thead>
+                            <tr>
+                                <th>Operação Textual</th>
+                                <th>Finalidade Lógica</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Busca (Find / Index)</strong></td>
+                                <td>Localiza a posição exata de ocorrência de um caractere ou palavra dentro do texto.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Substituição (Replace)</strong></td>
+                                <td>Varre o texto trocando ocorrências de um termo específico por outro valor desejado.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+            <!-- ================= AULA 3 ================= -->
+            <article id="aula3" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 19 &bull; Aula 03</span>
+                    <h2>Slicing e formatação com fstrings</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        O fatiamento (`slicing`) permite extrair fatias ou intervalos específicos de uma string utilizando índices, enquanto as interpolações dinâmicas (`f-strings`) otimizam a formatação de saídas textuais[cite: 2].
+                    </p>
+
+                    <div class="fluxo-diagrama">
+                        <strong>[Texto Original]</strong> &rarr; Aplicação de Slicing `[inicio:fim]` &rarr; <strong>[Fatia Extraída]</strong>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ================= AULA 4 ================= -->
+            <article id="aula4" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 19 &bull; Aula 04</span>
+                    <h2>Parsing de logs</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Nesta aula prática, aplicamos técnicas avançadas de manipulação de strings para analisar arquivos de registro (logs) e extrair informações úteis[cite: 2].
+                    </p>
+
+                    <div class="callout-pratica">
+                        <strong>Atividade Prática &bull; Extrator de Dados de Log</strong>
+                        Desenvolver um script que lê linhas de texto estruturadas de log, isolando datas, códigos de erro e mensagens descritivas através de buscas e fatiamentos textuais.
+                    </div>
+                </div>
+            </article>
+
+            <!-- Navegação Inferior entre Semanas -->
+            <nav class="navegacao-semanas" aria-label="Navegação entre semanas">
+                <a href="bim3-s18.html" class="nav-btn">&larr; Anterior: Semana 18</a>
+                <a href="index.html" class="nav-btn">Índice do 3º Bimestre</a>
+                <a href="bim3-s20.html" class="nav-btn">Próxima: Semana 20 &rarr;</a>
+            </nav>
+
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span>Lógica e Linguagem de Programação &bull; <strong>Prof. Rafael Vainisckas Lapreza</strong></span>
+            <span>3º Bimestre &bull; Semana 19</span>
+        </div>
+    </footer>
+
+</body>
+</html>

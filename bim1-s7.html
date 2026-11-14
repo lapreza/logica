@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 07 – Introdução às Estruturas de Decisão Composta | Prof. Rafael Vainisckas Lapreza</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <a href="index.html" class="brand">
+                <span class="brand-tag">LOGICA-PROG</span>
+                <span>Lógica e Linguagem de Programação</span>
+            </a>
+            <div class="prof-badge">
+                Docente: <strong>Prof. Rafael Vainisckas Lapreza</strong>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cabeçalho da Semana -->
+    <section class="hero">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Navegação estrutural">
+                <a href="index.html">Início</a>
+                <span>/</span>
+                <a href="index.html">1º Bimestre</a>
+                <span>/</span>
+                <strong>Semana 07 (S7)</strong>
+            </nav>
+
+            <span class="kicker">1º Bimestre &bull; Semana 07 (Aulas 25 a 28)</span>
+            <h1>Introdução às Estruturas de Decisão Composta</h1>
+            <p class="hero-lead">
+                Nesta semana você irá implementar estruturas de decisão composta (SE…SENÃO) para desenvolver algoritmos que lidam com múltiplos caminhos e condições, resolvendo problemas mais complexos[cite: 2].
+            </p>
+
+            <!-- Índice rápido das 4 aulas da semana -->
+            <div class="indice-aulas">
+                <a href="#aula1" class="indice-link">
+                    <span>Aula 01</span>
+                    Estrutura SE / SENÃO
+                </a>
+                <a href="#aula2" class="indice-link">
+                    <span>Aula 02</span>
+                    Comparações encadeadas
+                </a>
+                <a href="#aula3" class="indice-link">
+                    <span>Aula 03</span>
+                    Fluxogramas com decisão composta
+                </a>
+                <a href="#aula4" class="indice-link">
+                    <span>Aula 04</span>
+                    Prática com decisão composta
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo das 4 Aulas -->
+    <main class="bimestres-section">
+        <div class="container">
+
+            <!-- ================= AULA 1 ================= -->
+            <article id="aula1" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 07 &bull; Aula 01</span>
+                    <h2>Estrutura SE / SENÃO</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        A estrutura de decisão composta amplia a lógica condicional oferecendo uma alternativa obrigatória. Se a condição principal for verdadeira, um bloco de comandos é executado; caso contrário, o bloco associado ao <strong>SENÃO</strong> (<em>else</em>) é acionado automaticamente[cite: 2].
+                    </p>
+
+                    <h3>O Fluxo de Duas Vias</h3>
+                    <div class="fluxo-diagrama">
+                        <strong>[Avalia Condição]</strong> &rarr; (Verdadeiro) &rarr; <span>Bloco SE</span> <br>
+                        <strong>[Avalia Condição]</strong> &rarr; (Falso) &rarr; <span>Bloco SENÃO</span>
+                    </div>
+
+                    <ul>
+                        <li><strong>Exclusividade Mútua:</strong> Apenas um dos dois blocos (o do <code>SE</code> ou o do <code>SENÃO</code>) será executado em cada execução do programa.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ================= AULA 2 ================= -->
+            <article id="aula2" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 07 &bull; Aula 02</span>
+                    <h2>Variações com comparações encadeadas</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Quando um problema exige a escolha entre três ou mais caminhos possíveis (como classificar notas em múltiplos conceitos ou faixas etárias), utilizamos o encadeamento de estruturas condicionais compostas (<code>SE... SENAO SE... SENAO</code>)[cite: 2].
+                    </p>
+
+                    <table class="tabela-tecnica">
+                        <thead>
+                            <tr>
+                                <th>Tipo de Decisão</th>
+                                <th>Estrutura Utilizada</th>
+                                <th>Finalidade Principal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Simples</strong></td>
+                                <td>Apenas <code>SE</code></td>
+                                <td>Executa uma ação se verdadeiro; ignora se falso.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Composta</strong></td>
+                                <td><code>SE ... SENÃO</code></td>
+                                <td>Escolhe obrigatoriamente entre duas ações exclusivas.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Encadeada</strong></td>
+                                <td><code>SE ... SENÃO SE ... SENÃO</code></td>
+                                <td>Trata múltiplos cenários e faixas de decisão hierárquicas.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+            <!-- ================= AULA 3 ================= -->
+            <article id="aula3" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 07 &bull; Aula 03</span>
+                    <h2>Fluxogramas com decisão composta</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Nos diagramas de blocos, a decisão composta utiliza o símbolo de <strong>Losango</strong> ramificando o fluxo em duas direções simétricas e bem definidas: o ramo esquerdo para o caso verdadeiro e o ramo direito para o caso falso[cite: 2].
+                    </p>
+
+                    <ul>
+                        <li><strong>Convergência:</strong> Após a execução do bloco correspondente (seja o do <code>SE</code> ou o do <code>SENÃO</code>), os caminhos voltam a se unir no fluxo principal do algoritmo.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ================= AULA 4 ================= -->
+            <article id="aula4" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 07 &bull; Aula 04</span>
+                    <h2>Prática com decisão composta</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Nesta aula final do 1º bimestre, consolidamos o aprendizado de desvios condicionais compostos e encadeados resolvendo problemas práticos de classificação[cite: 2].
+                    </p>
+
+                    <div class="callout-pratica">
+                        <strong>Fechamento do 1º Bimestre &bull; Sistema de Avaliação Escolar</strong>
+                        Desenvolver um algoritmo completo que lê a nota final de um aluno e, utilizando uma estrutura composta encadeada, classifica e exibe se o estudante está <em>Aprovado</em>, em <em>Recuperação</em> ou <em>Reprovado</em>.
+                    </div>
+                </div>
+            </article>
+
+            <!-- Navegação Inferior entre Semanas -->
+            <nav class="navegacao-semanas" aria-label="Navegação entre semanas">
+                <a href="bim1-s6.html" class="nav-btn">&larr; Anterior: Semana 06</a>
+                <a href="index.html" class="nav-btn">Índice do 1º Bimestre</a>
+                <a href="../index.html" class="nav-btn">Início Geral &rarr;</a>
+            </nav>
+
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span>Lógica e Linguagem de Programação &bull; <strong>Prof. Rafael Vainisckas Lapreza</strong></span>
+            <span>1º Bimestre &bull; Semana 07</span>
+        </div>
+    </footer>
+
+</body>
+</html>

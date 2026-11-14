@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 18 – Documentação, testes unitários e depuração | Prof. Rafael Vainisckas Lapreza</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <a href="index.html" class="brand">
+                <span class="brand-tag">LOGICA-PROG</span>
+                <span>Lógica e Linguagem de Programação</span>
+            </a>
+            <div class="prof-badge">
+                Docente: <strong>Prof. Rafael Vainisckas Lapreza</strong>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cabeçalho da Semana -->
+    <section class="hero">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Navegação estrutural">
+                <a href="index.html">Início</a>
+                <span>/</span>
+                <a href="index.html">3º Bimestre</a>
+                <span>/</span>
+                <strong>Semana 18 (S18)</strong>
+            </nav>
+
+            <span class="kicker">3º Bimestre &bull; Semana 18 (Aulas 13 a 16)</span>
+            <h1>Documentação, testes unitários e depuração</h1>
+            <p class="hero-lead">
+                Nesta semana você irá criar "asserts" simples e interpretar falhas para começar a praticar testes unitários e garantir que seu código funcione como esperado, mesmo após alterações.
+            </p>
+
+            <!-- Índice rápido das 4 aulas da semana -->
+            <div class="indice-aulas">
+                <a href="#aula1" class="indice-link">
+                    <span>Aula 01</span>
+                    Docstrings e comentários eficazes
+                </a>
+                <a href="#aula2" class="indice-link">
+                    <span>Aula 02</span>
+                    Introdução a testes unitários
+                </a>
+                <a href="#aula3" class="indice-link">
+                    <span>Aula 03</span>
+                    Técnicas básicas de depuração
+                </a>
+                <a href="#aula4" class="indice-link">
+                    <span>Aula 04</span>
+                    Minikata TDD “Calculadora”
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo das 4 Aulas -->
+    <main class="bimestres-section">
+        <div class="container">
+
+            <!-- ================= AULA 1 ================= -->
+            <article id="aula1" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 18 &bull; Aula 01</span>
+                    <h2>Docstrings e comentários eficazes</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Documentar o código adequadamente é essencial para explicitar o comportamento esperado de funções e módulos, facilitando a legibilidade e manutenção por outros desenvolvedores[cite: 2].
+                    </p>
+
+                    <ul>
+                        <li><strong>Docstrings:</strong> Documentações embutidas diretamente no código que descrevem os objetivos, parâmetros e retornos de subrotinas.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ================= AULA 2 ================= -->
+            <article id="aula2" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 18 &bull; Aula 02</span>
+                    <h2>Introdução a testes unitários</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Os testes unitários consistem na validação automatizada de pequenos blocos de código (unidades) utilizando asserções (`asserts`) para garantir que o resultado obtido corresponda ao esperado[cite: 2].
+                    </p>
+
+                    <div class="fluxo-diagrama">
+                        <strong>[Entrada de Teste]</strong> &rarr; <span>Executa Função</span> &rarr; <strong>[Valida com Assert]</strong> &rarr; (Sucesso / Falha)
+                    </div>
+                </div>
+            </article>
+
+            <!-- ================= AULA 3 ================= -->
+            <article id="aula3" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 18 &bull; Aula 03</span>
+                    <h2>Técnicas básicas de depuração</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        A depuração (debugging) engloba métodos sistemáticos para rastrear o fluxo de execução de um programa, inspecionar variáveis em tempo de execução e identificar a origem de bugs[cite: 2].
+                    </p>
+
+                    <table class="tabela-tecnica">
+                        <thead>
+                            <tr>
+                                <th>Técnica de Depuração</th>
+                                <th>Aplicação Prática</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Rastreio por Impressão</strong></td>
+                                <td>Uso de saídas estratégicas no console para monitorar estados de variáveis.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Análise de Falhas</strong></td>
+                                <td>Interpretação de mensagens de erro e rastreios de pilha (stack traces).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+            <!-- ================= AULA 4 ================= -->
+            <article id="aula4" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 18 &bull; Aula 04</span>
+                    <h2>Minikata TDD “Calculadora”</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Nesta oficina prática, aplicamos o conceito de Desenvolvimento Orientado por Testes (TDD) escrevendo os testes antes de implementar a lógica funcional[cite: 2].
+                    </p>
+
+                    <div class="callout-pratica">
+                        <strong>Atividade Prática &bull; Kata de Testes</strong>
+                        Desenvolver testes unitários para as operações básicas de uma calculadora e, em seguida, programar as funções correspondentes até que todos os testes passem com sucesso.
+                    </div>
+                </div>
+            </article>
+
+            <!-- Navegação Inferior entre Semanas -->
+            <nav class="navegacao-semanas" aria-label="Navegação entre semanas">
+                <a href="bim3-s17.html" class="nav-btn">&larr; Anterior: Semana 17</a>
+                <a href="index.html" class="nav-btn">Índice do 3º Bimestre</a>
+                <a href="bim3-s19.html" class="nav-btn">Próxima: Semana 19 &rarr;</a>
+            </nav>
+
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span>Lógica e Linguagem de Programação &bull; <strong>Prof. Rafael Vainisckas Lapreza</strong></span>
+            <span>3º Bimestre &bull; Semana 18</span>
+        </div>
+    </footer>
+
+</body>
+</html>

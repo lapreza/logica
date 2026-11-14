@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 01 – Introdução à Estrutura Básica de Programação | Prof. Rafael Vainisckas Lapreza</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <a href="../index.html" class="brand">
+                <span class="brand-tag">LOGICA-PROG</span>
+                <span>Lógica e Linguagem de Programação</span>
+            </a>
+            <div class="prof-badge">
+                Docente: <strong>Prof. Rafael Vainisckas Lapreza</strong>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cabeçalho da Semana -->
+    <section class="hero">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Navegação estrutural">
+                <a href="../index.html">Início</a>
+                <span>/</span>
+                <a href="index.html">1º Bimestre</a>
+                <span>/</span>
+                <strong>Semana 01 (S1)</strong>
+            </nav>
+
+            <span class="kicker">1º Bimestre &bull; Semana 01 (Aulas 01 a 04)</span>
+            <h1>Introdução à Estrutura Básica de Programação</h1>
+            <p class="hero-lead">
+                Nesta semana você irá compreender os conceitos de programação e algoritmos para dar os primeiros passos na criação de soluções lógicas para problemas do dia a dia.
+            </p>
+
+            <!-- Índice rápido das 4 aulas da semana -->
+            <div class="indice-aulas">
+                <a href="#aula1" class="indice-link">
+                    <span>Aula 01</span>
+                    O que é programar?
+                </a>
+                <a href="#aula2" class="indice-link">
+                    <span>Aula 02</span>
+                    Algoritmos no cotidiano
+                </a>
+                <a href="#aula3" class="indice-link">
+                    <span>Aula 03</span>
+                    Fluxogramas e representação visual
+                </a>
+                <a href="#aula4" class="indice-link">
+                    <span>Aula 04</span>
+                    Variáveis e tipos de dados
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo das 4 Aulas -->
+    <main class="bimestres-section">
+        <div class="container">
+
+            <!-- ================= AULA 1 ================= -->
+            <article id="aula1" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 01 &bull; Aula 01</span>
+                    <h2>O que é programar?</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Programar nada mais é do que dar instruções claras, lógicas e ordenadas para que um computador execute uma tarefa específica. Como o computador não possui intuição ou capacidade de adivinhação, ele depende inteiramente da precisão das ordens recebidas.
+                    </p>
+
+                    <h3>A Essência da Computação</h3>
+                    <ul>
+                        <li><strong>Pensamento Computacional:</strong> Habilidade de quebrar problemas grandes e complexos em partes menores, manejáveis e solucionáveis por etapas.</li>
+                        <li><strong>Papel do Programador:</strong> O programador atua como um tradutor entre a necessidade do mundo real e a lógica binária/executável compreensível pelas máquinas.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ================= AULA 2 ================= -->
+            <article id="aula2" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 01 &bull; Aula 02</span>
+                    <h2>Algoritmos no cotidiano</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Um <strong>algoritmo</strong> pode ser definido como uma sequência finita de passos bem definidos que visam solucionar um problema ou realizar uma tarefa. Nós executamos algoritmos o tempo todo no dia a dia sem perceber.
+                    </p>
+
+                    <div class="fluxo-diagrama">
+                        <strong>[Passo 1: Entrar na cozinha]</strong> &rarr; <span>[Passo 2: Separar ingredientes]</span> &rarr; <span>[Passo 3: Misturar e assar]</span> &rarr; <strong>[Passo 4: Servir]</strong>
+                    </div>
+
+                    <ul>
+                        <li><strong>Características Fundamentais:</strong> Um algoritmo precisa ter um início claro, instruções não ambíguas, passos executáveis e um fim determinado.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ================= AULA 3 ================= -->
+            <article id="aula3" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 01 &bull; Aula 03</span>
+                    <h2>Fluxogramas e representação visual</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        O <strong>fluxograma</strong> é a representação gráfica de um algoritmo. Utilizando formas geométricas padronizadas, ele facilita a visualização do fluxo lógico e dos desvios condicionais antes de escrevermos qualquer linha de código.
+                    </p>
+
+                    <table class="tabela-tecnica">
+                        <thead>
+                            <tr>
+                                <th>Forma Geométrica</th>
+                                <th>Nome do Símbolo</th>
+                                <th>Significado no Algoritmo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Início / Fim</strong></td>
+                                <td>Terminal (Oval / Arredondado)</td>
+                                <td>Indica o ponto inicial ou o encerramento do fluxo.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Entrada / Saída</strong></td>
+                                <td>Paralelogramo</td>
+                                <td>Leitura de dados digitados ou exibição de resultados na tela.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Processamento</strong></td>
+                                <td>Retângulo</td>
+                                <td>Atribuições, cálculos matemáticos e manipulação de variáveis.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Decisão</strong></td>
+                                <td>Losango</td>
+                                <td>Desvios condicionais (perguntas lógicas do tipo <em>SE / SENÃO</em>).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+            <!-- ================= AULA 4 ================= -->
+            <article id="aula4" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 01 &bull; Aula 04</span>
+                    <h2>Variáveis e tipos de dados</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Para que um programa possa armazenar, manipular e consultar informações na memória do computador, utilizamos o conceito de <strong>variáveis</strong>.
+                    </p>
+
+                    <ul>
+                        <li><strong>O que é uma Variável?</strong> É um espaço reservado na memória RAM destinado a guardar um valor que pode mudar ao longo da execução do programa.</li>
+                        <li><strong>Tipos de Dados Básicos:</strong>
+                            <ul>
+                                <li><code>Inteiro</code>: Números inteiros positivos ou negativos (ex: <code>10</code>, <code>-3</code>, <code>2026</code>).</li>
+                                <li><code>Real / Ponto Flutuante</code>: Números com casas decimais (ex: <code>9.5</code>, <code>3.14</code>).</li>
+                                <li><code>Caractere / Cadeia (String)</code>: Textos ou letras (ex: <code>"Rafael"</code>, <code>"Aprovado"</code>).</li>
+                                <li><code>Booleano (Lógico)</code>: Valores binários de verdadeiro ou falso (<code>verdadeiro</code> / <code>falso</code>).</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="callout-pratica">
+                        <strong>Atividade Prática &bull; Mapeando Algoritmos Cotidianos</strong>
+                        Escrever no caderno ou editor de texto o algoritmo passo a passo para realizar um saque em um caixa eletrônico e desenhar o fluxograma correspondente utilizando símbolos de terminal, entrada, processamento e decisão.
+                    </div>
+                </div>
+            </article>
+
+            <!-- Navegação Inferior entre Semanas -->
+            <nav class="navegacao-semanas" aria-label="Navegação entre semanas">
+                <a href="index.html" class="nav-btn">&larr; Índice do 1º Bimestre</a>
+                <a href="bim1-s2.html" class="nav-btn">Próxima: Semana 02 &rarr;</a>
+            </nav>
+
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span>Lógica e Linguagem de Programação &bull; <strong>Prof. Rafael Vainisckas Lapreza</strong></span>
+            <span>1º Bimestre &bull; Semana 01</span>
+        </div>
+    </footer>
+
+</body>
+</html>

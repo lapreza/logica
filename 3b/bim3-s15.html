@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 15 – Vetores (arrays) unidimensionais | Prof. Rafael Vainisckas Lapreza</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <a href="index.html" class="brand">
+                <span class="brand-tag">LOGICA-PROG</span>
+                <span>Lógica e Linguagem de Programação</span>
+            </a>
+            <div class="prof-badge">
+                Docente: <strong>Prof. Rafael Vainisckas Lapreza</strong>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cabeçalho da Semana -->
+    <section class="hero">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Navegação estrutural">
+                <a href="index.html">Início</a>
+                <span>/</span>
+                <a href="index.html">3º Bimestre</a>
+                <span>/</span>
+                <strong>Semana 15 (S15)</strong>
+            </nav>
+
+            <span class="kicker">3º Bimestre &bull; Semana 15 (Aulas 01 a 04)</span>
+            <h1>Vetores (arrays) unidimensionais</h1>
+            <p class="hero-lead">
+                Nesta semana você irá criar e percorrer vetores (arrays) para manipular coleções de dados, uma base essencial para implementar algoritmos de busca e análise de informações.
+            </p>
+
+            <!-- Índice rápido das 4 aulas da semana -->
+            <div class="indice-aulas">
+                <a href="#aula1" class="indice-link">
+                    <span>Aula 01</span>
+                    Declaração e inicialização de vetores
+                </a>
+                <a href="#aula2" class="indice-link">
+                    <span>Aula 02</span>
+                    Percurso sequencial de vetores
+                </a>
+                <a href="#aula3" class="indice-link">
+                    <span>Aula 03</span>
+                    Busca linear e estatísticas simples
+                </a>
+                <a href="#aula4" class="indice-link">
+                    <span>Aula 04</span>
+                    Oficina prática – “Notas da turma”
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo das 4 Aulas -->
+    <main class="bimestres-section">
+        <div class="container">
+
+            <!-- ================= AULA 1 ================= -->
+            <article id="aula1" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 15 &bull; Aula 01</span>
+                    <h2>Declaração e inicialização de vetores</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Os vetores (arrays unidimensionais) permitem armazenar múltiplos valores de um mesmo tipo sob uma única estrutura de dados organizada por posições sequenciais[cite: 2].
+                    </p>
+
+                    <h3>Conceitos Iniciais</h3>
+                    <ul>
+                        <li><strong>Indexação:</strong> Cada elemento do vetor é acessado por meio de um índice numérico, que tipicamente inicia em zero.</li>
+                        <li><strong>Alocação:</strong> Reserva de espaço na memória para acomodar o tamanho estipulado da lista de dados.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ================= AULA 2 ================= -->
+            <article id="aula2" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 15 &bull; Aula 02</span>
+                    <h2>Percurso sequencial de vetores</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Para visitar, exibir ou modificar cada elemento armazenado em um vetor, utilizamos estruturas de repetição (como o <code>for</code>) para percorrer a lista de ponta a ponta[cite: 2].
+                    </p>
+
+                    <div class="fluxo-diagrama">
+                        <strong>[Início do Vetor]</strong> &rarr; <span>Índice 0</span> &rarr; <span>Índice 1</span> &rarr; <span>...</span> &rarr; <strong>[Fim do Vetor]</strong>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ================= AULA 3 ================= -->
+            <article id="aula3" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 15 &bull; Aula 03</span>
+                    <h2>Busca linear e estatísticas simples</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Combinando vetores e laços condicionais, podemos realizar varreduras para encontrar elementos específicos (busca linear) ou calcular métricas agregadas, como valores máximos, mínimos e médias[cite: 2].
+                    </p>
+
+                    <table class="tabela-tecnica">
+                        <thead>
+                            <tr>
+                                <th>Operação em Vetores</th>
+                                <th>Objetivo Lógico</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Busca Linear</strong></td>
+                                <td>Percorre o vetor sequencialmente comparando cada item com o valor procurado.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Estatísticas</strong></td>
+                                <td>Acumula valores para extrair somas, médias, maiores e menores ocorrências.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+            <!-- ================= AULA 4 ================= -->
+            <article id="aula4" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 15 &bull; Aula 04</span>
+                    <h2>Oficina prática – “Notas da turma”</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Nesta oficina prática, aplicamos os conceitos de vetores para gerenciar um cenário real de processamento de dados acadêmicos[cite: 2].
+                    </p>
+
+                    <div class="callout-pratica">
+                        <strong>Atividade Prática &bull; Sistema Notas da Turma</strong>
+                        Desenvolver um programa que armazena em um vetor as notas de vários alunos, calcula a média geral da turma e identifica quais notas ficaram acima da média calculada.
+                    </div>
+                </div>
+            </article>
+
+            <!-- Navegação Inferior entre Semanas -->
+            <nav class="navegacao-semanas" aria-label="Navegação entre semanas">
+                <a href="index.html" class="nav-btn">&larr; Índice do 3º Bimestre</a>
+                <a href="bim3-s16.html" class="nav-btn">Próxima: Semana 16 &rarr;</a>
+            </nav>
+
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span>Lógica e Linguagem de Programação &bull; <strong>Prof. Rafael Vainisckas Lapreza</strong></span>
+            <span>3º Bimestre &bull; Semana 15</span>
+        </div>
+    </footer>
+
+</body>
+</html>

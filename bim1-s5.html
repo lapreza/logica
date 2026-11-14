@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 05 – Introdução às Estruturas de Decisão Simples | Prof. Rafael Vainisckas Lapreza</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <a href="index.html" class="brand">
+                <span class="brand-tag">LOGICA-PROG</span>
+                <span>Lógica e Linguagem de Programação</span>
+            </a>
+            <div class="prof-badge">
+                Docente: <strong>Prof. Rafael Vainisckas Lapreza</strong>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cabeçalho da Semana -->
+    <section class="hero">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Navegação estrutural">
+                <a href="index.html">Início</a>
+                <span>/</span>
+                <a href="index.html">1º Bimestre</a>
+                <span>/</span>
+                <strong>Semana 05 (S5)</strong>
+            </nav>
+
+            <span class="kicker">1º Bimestre &bull; Semana 05 (Aulas 17 a 20)</span>
+            <h1>Introdução às Estruturas de Decisão Simples</h1>
+            <p class="hero-lead">
+                Nesta semana você irá implementar estruturas de decisão simples com condições lógicas e operadores para criar programas que resolvem problemas básicos de verificação e tomada de decisão[cite: 2].
+            </p>
+
+            <!-- Índice rápido das 4 aulas da semana -->
+            <div class="indice-aulas">
+                <a href="#aula1" class="indice-link">
+                    <span>Aula 01</span>
+                    Tomada de decisão com SE
+                </a>
+                <a href="#aula2" class="indice-link">
+                    <span>Aula 02</span>
+                    Estrutura sequencial + SE
+                </a>
+                <a href="#aula3" class="indice-link">
+                    <span>Aula 03</span>
+                    Fluxograma com decisão simples
+                </a>
+                <a href="#aula4" class="indice-link">
+                    <span>Aula 04</span>
+                    Aplicações com SE (prática)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo das 4 Aulas -->
+    <main class="bimestres-section">
+        <div class="container">
+
+            <!-- ================= AULA 1 ================= -->
+            <article id="aula1" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 05 &bull; Aula 01</span>
+                    <h2>Tomada de decisão com SE</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        A tomada de decisão é o ponto onde o algoritmo ganha autonomia condicional. Com o comando <strong>SE</strong> (<em>if</em>), o programa avalia uma expressão lógica e determina se um determinado trecho de código deve ou não ser executado[cite: 2].
+                    </p>
+
+                    <h3>A Mecânica da Avaliação Lógica</h3>
+                    <ul>
+                        <li><strong>Condição Verdadeira:</strong> O fluxo adentra o bloco interno e executa as instruções delimitadas.</li>
+                        <li><strong>Condição Falsa:</strong> O bloco interno é completamente ignorado, prosseguindo com o restante do algoritmo.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ================= AULA 2 ================= -->
+            <article id="aula2" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 05 &bull; Aula 02</span>
+                    <h2>Estrutura sequencial combinada com SE</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Programas reais misturam comandos sequenciais tradicionais (leitura de dados e cálculos básicos) com pontos de desvio condicional usando o <strong>SE</strong>[cite: 2].
+                    </p>
+
+                    <div class="fluxo-diagrama">
+                        <strong>[Entrada de Dados]</strong> &rarr; <span>[Processamento Sequencial]</span> &rarr; <strong>[Avaliação SE]</strong> &rarr; <span>[Saída Condicional]</span>
+                    </div>
+
+                    <ul>
+                        <li><strong>Ordem de Execução:</strong> A estrutura sequencial prepara os dados que serão testados logo em seguida pela condição lógica.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ================= AULA 3 ================= -->
+            <article id="aula3" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 05 &bull; Aula 03</span>
+                    <h2>Fluxograma com decisão simples</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Na representação gráfica, a decisão simples utiliza o símbolo de <strong>Losango</strong>, de onde partem duas setas direcionenciais distintas: uma indicando o caminho para o fluxo verdadeiro e outra contornando o bloco caso o resultado seja falso[cite: 2].
+                    </p>
+
+                    <table class="tabela-tecnica">
+                        <thead>
+                            <tr>
+                                <th>Elemento do Fluxograma</th>
+                                <th>Função na Decisão Simples</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Losango</strong></td>
+                                <td>Contém a pergunta ou condição lógica (ex: <code>nota &gt;= 6.0?</code>).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Seta "Sim" / "Verdadeiro"</strong></td>
+                                <td>Direciona o fluxo para a execução das instruções internas.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Seta "Não" / "Falso"</strong></td>
+                                <td>Contorna o bloco condicional e segue para a próxima instrução comum.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+            <!-- ================= AULA 4 ================= -->
+            <article id="aula4" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 05 &bull; Aula 04</span>
+                    <h2>Aplicações com SE (atividade prática)</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Nesta aula prática, aplicamos o comando <code>SE</code> isolado para resolver problemas básicos de verificação e alertas no terminal[cite: 2].
+                    </p>
+
+                    <div class="callout-pratica">
+                        <strong>Atividade Prática &bull; Alerta de Velocidade Máxima</strong>
+                        Construir um algoritmo que lê a velocidade de um veículo em uma via. Se a velocidade informada ultrapassar 80 km/h, o programa deve exibir na tela uma mensagem de infração por excesso de velocidade; caso contrário, não exibe nenhum alerta adicional.
+                    </div>
+                </div>
+            </article>
+
+            <!-- Navegação Inferior entre Semanas -->
+            <nav class="navegacao-semanas" aria-label="Navegação entre semanas">
+                <a href="bim1-s4.html" class="nav-btn">&larr; Anterior: Semana 04</a>
+                <a href="index.html" class="nav-btn">Índice do 1º Bimestre</a>
+                <a href="bim1-s6.html" class="nav-btn">Próxima: Semana 06 &rarr;</a>
+            </nav>
+
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span>Lógica e Linguagem de Programação &bull; <strong>Prof. Rafael Vainisckas Lapreza</strong></span>
+            <span>1º Bimestre &bull; Semana 05</span>
+        </div>
+    </footer>
+
+</body>
+</html>

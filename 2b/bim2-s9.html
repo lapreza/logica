@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 09 – Estruturas de Repetição – loop for | Prof. Rafael Vainisckas Lapreza</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <a href="index.html" class="brand">
+                <span class="brand-tag">LOGICA-PROG</span>
+                <span>Lógica e Linguagem de Programação</span>
+            </a>
+            <div class="prof-badge">
+                Docente: <strong>Prof. Rafael Vainisckas Lapreza</strong>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cabeçalho da Semana -->
+    <section class="hero">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Navegação estrutural">
+                <a href="index.html">Início</a>
+                <span>/</span>
+                <a href="index.html">2º Bimestre</a>
+                <span>/</span>
+                <strong>Semana 09 (S9)</strong>
+            </nav>
+
+            <span class="kicker">2º Bimestre &bull; Semana 09 (Aulas 05 a 08)</span>
+            <h1>Estruturas de Repetição – loop for</h1>
+            <p class="hero-lead">
+                Nesta semana você irá escrever loops for para percorrer coleções de dados, gerar sequências numéricas e criar repetições controladas de forma mais limpa e eficiente em seus programas.
+            </p>
+
+            <!-- Índice rápido das 4 aulas da semana -->
+            <div class="indice-aulas">
+                <a href="#aula1" class="indice-link">
+                    <span>Aula 01</span>
+                    Sintaxe e uso básico do for
+                </a>
+                <a href="#aula2" class="indice-link">
+                    <span>Aula 02</span>
+                    Iteração sobre coleções
+                </a>
+                <a href="#aula3" class="indice-link">
+                    <span>Aula 03</span>
+                    Função range() e passo variável
+                </a>
+                <a href="#aula4" class="indice-link">
+                    <span>Aula 04</span>
+                    Desafio – Tabelas de multiplicação
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo das 4 Aulas -->
+    <main class="bimestres-section">
+        <div class="container">
+
+            <!-- ================= AULA 1 ================= -->
+            <article id="aula1" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 09 &bull; Aula 01</span>
+                    <h2>Sintaxe e uso básico do for</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Diferente do <code>while</code> (que se baseia em uma condição de parada genérica), o comando <strong>para</strong> (<em>for</em>) é ideal para situações onde sabemos exatamente quantas vezes o bloco de código deve se repetir[cite: 3].
+                    </p>
+
+                    <h3>A Estrutura de Repetição Determinada</h3>
+                    <ul>
+                        <li><strong>Controle Automático:</strong> A inicialização da variável contadora, a verificação do limite e o incremento ocorrem de forma compacta na própria linha de declaração do laço.</li>
+                        <li><strong>Clareza Visual:</strong> Reduz o risco de esquecer atualizações de contadores que poderiam gerar laços infinitos.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ================= AULA 2 ================= -->
+            <article id="aula2" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 09 &bull; Aula 02</span>
+                    <h2>Iteração sobre coleções</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        O loop <code>for</code> brilha quando precisamos percorrer elementos estruturados (como sequências de caracteres ou coleções de dados), visitando cada item de forma sequencial sem precisar controlar índices manualmente[cite: 3].
+                    </p>
+
+                    <div class="fluxo-diagrama">
+                        <strong>[Início da Coleção]</strong> &rarr; <span>Visita Item 1</span> &rarr; <span>Visita Item 2</span> &rarr; <span>...</span> &rarr; <strong>[Fim da Coleção]</strong>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ================= AULA 3 ================= -->
+            <article id="aula3" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 09 &bull; Aula 03</span>
+                    <h2>Função range() e passo variável</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Para gerar sequências numéricas customizadas (com limites de início, fim e saltos específicos), utilizamos funções auxiliares de controle de intervalo como o <code>range()</code>[cite: 3].
+                    </p>
+
+                    <table class="tabela-tecnica">
+                        <thead>
+                            <tr>
+                                <th>Parâmetro do Range</th>
+                                <th>Comportamento no Loop</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Valor Final (Parada)</strong></td>
+                                <td>Define até onde a contagem vai (ex: <code>range(10)</code> gera de 0 a 9).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Início e Fim</strong></td>
+                                <td>Define os limites de contagem (ex: <code>range(1, 11)</code> gera de 1 a 10).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Passo (Step)</strong></td>
+                                <td>Define o incremento entre os números (ex: <code>range(0, 10, 2)</code> gera números pares: 0, 2, 4, 6, 8).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+            <!-- ================= AULA 4 ================= -->
+            <article id="aula4" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 09 &bull; Aula 04</span>
+                    <h2>Desafio – Tabelas de multiplicação</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Nesta aula prática, aplicamos o loop <code>for</code> e intervalos numéricos para construir um gerador automatizado de tabuadas[cite: 3].
+                    </p>
+
+                    <div class="callout-pratica">
+                        <strong>Atividade Prática &bull; Gerador de Tabuada com For</strong>
+                        Desenvolver um algoritmo que solicita ao usuário um número inteiro e utiliza um laço <code>for</code> com incremento controlado para calcular e exibir a tabuada desse número de 1 a 10 de forma formatada.
+                    </div>
+                </div>
+            </article>
+
+            <!-- Navegação Inferior entre Semanas -->
+            <nav class="navegacao-semanas" aria-label="Navegação entre semanas">
+                <a href="bim2-s8.html" class="nav-btn">&larr; Anterior: Semana 08</a>
+                <a href="index.html" class="nav-btn">Índice do 2º Bimestre</a>
+                <a href="bim2-s10.html" class="nav-btn">Próxima: Semana 10 &rarr;</a>
+            </nav>
+
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span>Lógica e Linguagem de Programação &bull; <strong>Prof. Rafael Vainisckas Lapreza</strong></span>
+            <span>2º Bimestre &bull; Semana 09</span>
+        </div>
+    </footer>
+
+</body>
+</html>

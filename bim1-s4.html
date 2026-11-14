@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 04 – Atividades Práticas - Criação de Programas | Prof. Rafael Vainisckas Lapreza</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <a href="index.html" class="brand">
+                <span class="brand-tag">LOGICA-PROG</span>
+                <span>Lógica e Linguagem de Programação</span>
+            </a>
+            <div class="prof-badge">
+                Docente: <strong>Prof. Rafael Vainisckas Lapreza</strong>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cabeçalho da Semana -->
+    <section class="hero">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Navegação estrutural">
+                <a href="index.html">Início</a>
+                <span>/</span>
+                <a href="index.html">1º Bimestre</a>
+                <span>/</span>
+                <strong>Semana 04 (S4)</strong>
+            </nav>
+
+            <span class="kicker">1º Bimestre &bull; Semana 04 (Aulas 13 a 16)</span>
+            <h1>Atividades Práticas - Criação de Programas</h1>
+            <p class="hero-lead">
+                Nesta semana você irá aplicar operadores relacionais e lógicos para construir expressões condicionais complexas e tomar decisões mais eficientes e inteligentes em seus algoritmos.
+            </p>
+
+            <!-- Índice rápido das 4 aulas da semana -->
+            <div class="indice-aulas">
+                <a href="#aula1" class="indice-link">
+                    <span>Aula 01</span>
+                    Operadores relacionais
+                </a>
+                <a href="#aula2" class="indice-link">
+                    <span>Aula 02</span>
+                    Operadores lógicos
+                </a>
+                <a href="#aula3" class="indice-link">
+                    <span>Aula 03</span>
+                    Tabelas-verdade e análise lógica
+                </a>
+                <a href="#aula4" class="indice-link">
+                    <span>Aula 04</span>
+                    Desafios com expressões condicionais
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo das 4 Aulas -->
+    <main class="bimestres-section">
+        <div class="container">
+
+            <!-- ================= AULA 1 ================= -->
+            <article id="aula1" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 04 &bull; Aula 01</span>
+                    <h2>Operadores relacionais</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Os operadores relacionais são utilizados para comparar dois valores. O resultado de qualquer comparação relacional é sempre um valor lógico: <strong>verdadeiro</strong> ou <strong>falso</strong>.
+                    </p>
+
+                    <table class="tabela-tecnica">
+                        <thead>
+                            <tr>
+                                <th>Operador</th>
+                                <th>Significado</th>
+                                <th>Exemplo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>==</code> ou <code>=</code></td>
+                                <td>Igual a</td>
+                                <td><code>idade == 18</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>!=</code> ou <code>&lt;&gt;</code></td>
+                                <td>Diferente de</td>
+                                <td><code>senha != "1234"</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>&gt;</code></td>
+                                <td>Maior que</td>
+                                <td><code>preco &gt; 100.0</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;</code></td>
+                                <td>Menor que</td>
+                                <td><code>temperatura &lt; 0</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>&gt;=</code></td>
+                                <td>Maior ou igual a</td>
+                                <td><code>nota &gt;= 7.0</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;=</code></td>
+                                <td>Menor ou igual a</td>
+                                <td><code>estoque &lt;= 5</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+            <!-- ================= AULA 2 ================= -->
+            <article id="aula2" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 04 &bull; Aula 02</span>
+                    <h2>Operadores lógicos</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Quando precisamos avaliar mais de uma condição simultaneamente em um mesmo comando <code>SE</code>, recorremos aos <strong>operadores lógicos</strong> (E, OU, NÃO).
+                    </p>
+
+                    <ul>
+                        <li><strong>E (<code>E</code> / <code>and</code>):</strong> Retorna verdadeiro apenas se <em>todas</em> as condições envolvidas forem verdadeiras.</li>
+                        <li><strong>OU (<code>OU</code> / <code>or</code>):</strong> Retorna verdadeiro se <em>pelo menos uma</em> das condições for verdadeira.</li>
+                        <li><strong>NÃO (<code>NAO</code> / <code>not</code>):</strong> Inverte o estado lógico (o que é verdadeiro vira falso e vice-versa).</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ================= AULA 3 ================= -->
+            <article id="aula3" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 04 &bull; Aula 03</span>
+                    <h2>Tabelas-verdade e análise lógica</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        As tabelas-verdade são ferramentas matemáticas usadas para determinar todas as combinações possíveis de resultados lógicos para expressões compostas.
+                    </p>
+
+                    <div class="fluxo-diagrama">
+                        <strong>[Condição A: V]</strong> &amp; <strong>[Condição B: F]</strong> &rarr; <span>Operador E (AND)</span> &rarr; <strong>[Resultado: Falso]</strong>
+                    </div>
+
+                    <ul>
+                        <li><strong>Análise Preventiva:</strong> Testar as expressões na tabela-verdade antes de programar evita falhas de lógica em cenários complexos de validação de acesso ou descontos.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ================= AULA 4 ================= -->
+            <article id="aula4" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 04 &bull; Aula 04</span>
+                    <h2>Desafios com expressões condicionais</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Nesta aula prática, os estudantes aplicam operadores relacionais e lógicos combinados para resolver problemas avançados de tomada de decisão.
+                    </p>
+
+                    <div class="callout-pratica">
+                        <strong>Atividade Prática &bull; Validador de Empréstimo Bancário</strong>
+                        Construir um algoritmo que valida a liberação de um empréstimo com base em duas regras simultâneas: o salário do cliente deve ser superior a R$ 3.000,00 <strong>E</strong> o valor da parcela não pode comprometer mais do que 30% da renda.
+                    </div>
+                </div>
+            </article>
+
+            <!-- Navegação Inferior entre Semanas -->
+            <nav class="navegacao-semanas" aria-label="Navegação entre semanas">
+                <a href="bim1-s3.html" class="nav-btn">&larr; Anterior: Semana 03</a>
+                <a href="index.html" class="nav-btn">Índice do 1º Bimestre</a>
+                <a href="bim1-s5.html" class="nav-btn">Próxima: Semana 05 &rarr;</a>
+            </nav>
+
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span>Lógica e Linguagem de Programação &bull; <strong>Prof. Rafael Vainisckas Lapreza</strong></span>
+            <span>1º Bimestre &bull; Semana 04</span>
+        </div>
+    </footer>
+
+</body>
+</html>

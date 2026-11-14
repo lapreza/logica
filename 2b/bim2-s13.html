@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 13 – Funções e procedimentos | Prof. Rafael Vainisckas Lapreza</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <a href="index.html" class="brand">
+                <span class="brand-tag">LOGICA-PROG</span>
+                <span>Lógica e Linguagem de Programação</span>
+            </a>
+            <div class="prof-badge">
+                Docente: <strong>Prof. Rafael Vainisckas Lapreza</strong>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cabeçalho da Semana -->
+    <section class="hero">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Navegação estrutural">
+                <a href="index.html">Início</a>
+                <span>/</span>
+                <a href="index.html">2º Bimestre</a>
+                <span>/</span>
+                <strong>Semana 13 (S13)</strong>
+            </nav>
+
+            <span class="kicker">2º Bimestre &bull; Semana 13 (Aulas 21 a 24)</span>
+            <h1>Funções e procedimentos</h1>
+            <p class="hero-lead">
+                Nesta semana você irá criar funções e procedimentos para modularizar seus programas, tornando o código mais organizado, reutilizável e fácil de dar manutenção.
+            </p>
+
+            <!-- Índice rápido das 4 aulas da semana -->
+            <div class="indice-aulas">
+                <a href="#aula1" class="indice-link">
+                    <span>Aula 01</span>
+                    Por que modularizar?
+                </a>
+                <a href="#aula2" class="indice-link">
+                    <span>Aula 02</span>
+                    Parâmetros e retorno - Aula Complementar
+                </a>
+                <a href="#aula3" class="indice-link">
+                    <span>Aula 03</span>
+                    Boas práticas de nomeação
+                </a>
+                <a href="#aula4" class="indice-link">
+                    <span>Aula 04</span>
+                    Desafio – biblioteca de utilidades - Aula Complementar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo das 4 Aulas -->
+    <main class="bimestres-section">
+        <div class="container">
+
+            <!-- ================= AULA 1 ================= -->
+            <article id="aula1" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 13 &bull; Aula 01</span>
+                    <h2>Por que modularizar?</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        À medida que os softwares crescem, códigos longos e sem divisão tornam-se difíceis de compreender e manter. A <strong>modularização</strong> consiste em dividir um problema complexo em subpartes menores, lógicas e independentes[cite: 1].
+                    </p>
+
+                    <ul>
+                        <li><strong>Reutilização:</strong> Evita a duplicação de blocos de código idênticos em diferentes partes do sistema.</li>
+                        <li><strong>Manutenibilidade:</strong> Facilita a identificação e a correção de erros isolados em funções específicas.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ================= AULA 2 ================= -->
+            <article id="aula2" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 13 &bull; Aula 02 &bull; Aula Complementar</span>
+                    <h2>Parâmetros e retorno</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        As subrotinas tornam-se ferramentas poderosas quando conseguem receber dados externos para processar e devolver resultados calculados ao fluxo principal do programa[cite: 1].
+                    </p>
+
+                    <table class="tabela-tecnica">
+                        <thead>
+                            <tr>
+                                <th>Conceito</th>
+                                <th>Papel no Bloco</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Parâmetros (Argumentos)</strong></td>
+                                <td>Valores de entrada passados para a função realizar suas operações (dados de origem).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Retorno</strong></td>
+                                <td>O resultado final processado que a função devolve para quem a chamou (dados de saída).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+            <!-- ================= AULA 3 ================= -->
+            <article id="aula3" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 13 &bull; Aula 03</span>
+                    <h2>Boas práticas de nomeação</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Uma função bem projetada deve ter um nome que expresse claramente sua responsabilidade única (princípio da responsabilidade única), facilitando a leitura limpa do código[cite: 1].
+                    </p>
+
+                    <ul>
+                        <li><strong>Uso de Verbos:</strong> Funções e procedimentos realizam ações; por isso, recomenda-se iniciar seus nomes com verbos (ex: <code>calcularMedia</code>, <code>imprimirRelatorio</code>, <code>validarSenha</code>).</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ================= AULA 4 ================= -->
+            <article id="aula4" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 13 &bull; Aula 04 &bull; Aula Complementar</span>
+                    <h2>Desafio – biblioteca de utilidades</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Nesta aula prática complementar, aplicamos os conceitos de modularização para construir um conjunto próprio de funções utilitárias reutilizáveis[cite: 1].
+                    </p>
+
+                    <div class="callout-pratica">
+                        <strong>Atividade Prática &bull; Criação de Biblioteca de Funções</strong>
+                        Desenvolver um arquivo contendo múltiplas funções independentes (como validadores de dados, conversores e formatadores matemáticos) e importá-las para resolver problemas em um script principal.
+                    </div>
+                </div>
+            </article>
+
+            <!-- Navegação Inferior entre Semanas -->
+            <nav class="navegacao-semanas" aria-label="Navegação entre semanas">
+                <a href="bim2-s12.html" class="nav-btn">&larr; Anterior: Semana 12</a>
+                <a href="index.html" class="nav-btn">Índice do 2º Bimestre</a>
+                <a href="bim2-s14.html" class="nav-btn">Próxima: Semana 14 &rarr;</a>
+            </nav>
+
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span>Lógica e Linguagem de Programação &bull; <strong>Prof. Rafael Vainisckas Lapreza</strong></span>
+            <span>2º Bimestre &bull; Semana 13</span>
+        </div>
+    </footer>
+
+</body>
+</html>

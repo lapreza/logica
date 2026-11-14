@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 03 – Operadores e Expressões | Prof. Rafael Vainisckas Lapreza</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <a href="index.html" class="brand">
+                <span class="brand-tag">LOGICA-PROG</span>
+                <span>Lógica e Linguagem de Programação</span>
+            </a>
+            <div class="prof-badge">
+                Docente: <strong>Prof. Rafael Vainisckas Lapreza</strong>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cabeçalho da Semana -->
+    <section class="hero">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Navegação estrutural">
+                <a href="index.html">Início</a>
+                <span>/</span>
+                <a href="index.html">1º Bimestre</a>
+                <span>/</span>
+                <strong>Semana 03 (S3)</strong>
+            </nav>
+
+            <span class="kicker">1º Bimestre &bull; Semana 03 (Aulas 09 a 12)</span>
+            <h1>Operadores e Expressões</h1>
+            <p class="hero-lead">
+                Nesta semana você irá implementar estruturas de decisão simples, compostas e aninhadas para criar programas capazes de tomar decisões e seguir diferentes caminhos lógicos, simulando situações do mundo real.
+            </p>
+
+            <!-- Índice rápido das 4 aulas da semana -->
+            <div class="indice-aulas">
+                <a href="#aula1" class="indice-link">
+                    <span>Aula 01</span>
+                    Condição simples: introdução ao SE
+                </a>
+                <a href="#aula2" class="indice-link">
+                    <span>Aula 02</span>
+                    Condição composta: SE…SENÃO
+                </a>
+                <a href="#aula3" class="indice-link">
+                    <span>Aula 03</span>
+                    Condições aninhadas: SE dentro de SE
+                </a>
+                <a href="#aula4" class="indice-link">
+                    <span>Aula 04</span>
+                    Exercícios práticos com decisões
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo das 4 Aulas -->
+    <main class="bimestres-section">
+        <div class="container">
+
+            <!-- ================= AULA 1 ================= -->
+            <article id="aula1" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 03 &bull; Aula 01</span>
+                    <h2>Condição simples: introdução ao SE</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Até agora, nossos programas executavam todas as instruções de forma estritamente sequencial. Com a estrutura de decisão <strong>SE</strong> (ou <em>if</em>), o algoritmo ganha a capacidade de avaliar uma condição lógica antes de executar um bloco de código.
+                    </p>
+
+                    <h3>O Mecanismo da Decisão Simples</h3>
+                    <div class="fluxo-diagrama">
+                        <strong>[Avalia Condição?]</strong> &rarr; (Verdadeiro) &rarr; <span>Executa o Bloco Interno</span> <br>
+                        <strong>[Avalia Condição?]</strong> &rarr; (Falso) &rarr; <span>Segue o Fluxo Normal (Ignora o Bloco)</span>
+                    </div>
+
+                    <ul>
+                        <li><strong>Estrutura Básica:</strong> Se a condição for verdadeira, os comandos internos são executados; caso contrário, o programa pula esse bloco.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ================= AULA 2 ================= -->
+            <article id="aula2" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 03 &bull; Aula 02</span>
+                    <h2>Condição composta: SE…SENÃO</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Muitas situações exigem que o programa tome caminhos alternativos: se uma condição for verdadeira, faz uma coisa; caso contrário (<strong>SENÃO</strong> / <em>else</em>), executa uma instrução diferente.
+                    </p>
+
+                    <table class="tabela-tecnica">
+                        <thead>
+                            <tr>
+                                <th>Estrutura Lógica</th>
+                                <th>Comportamento no Programa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>SE (Condição)</strong></td>
+                                <td>Executado apenas se o resultado da expressão lógica for verdadeiro.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>SENÃO</strong></td>
+                                <td>Executado obrigatoriamente se a expressão lógica principal resultar em falso.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+            <!-- ================= AULA 3 ================= -->
+            <article id="aula3" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 03 &bull; Aula 03</span>
+                    <h2>Condições aninhadas: SE dentro de SE</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Quando precisamos lidar com múltiplos critérios e faixas de decisão complexas, utilizamos o <strong>aninhamento</strong> — que consiste em colocar uma estrutura <code>SE...SENÃO</code> inteira dentro do bloco de outra condição.
+                    </p>
+
+                    <ul>
+                        <li><strong>Múltiplos Caminhos:</strong> Permite classificar dados em várias categorias distintas (por exemplo: diferenciar conceitos escolares como Aprovado, Recuperação ou Reprovado com base em faixas de notas).</li>
+                        <li><strong>Cuidados de Indentação:</strong> Manter o código bem recuado é essencial para não perder o controle de qual <code>SENÃO</code> pertence a qual <code>SE</code>.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ================= AULA 4 ================= -->
+            <article id="aula4" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 03 &bull; Aula 04</span>
+                    <h2>Exercícios práticos com decisões</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Nesta aula prática, aplicamos os conceitos de estruturas condicionais simples, compostas e aninhadas para resolver problemas lógicos inspirados em regras do cotidiano.
+                    </p>
+
+                    <div class="callout-pratica">
+                        <strong>Atividade Prática &bull; Sistema de Verificação de Maioridade</strong>
+                        Escrever um algoritmo completo que lê a idade de um usuário e exibe se ele é menor de idade, maior de idade ou idoso, utilizando estruturas condicionais compostas e aninhadas.
+                    </div>
+                </div>
+            </article>
+
+            <!-- Navegação Inferior entre Semanas -->
+            <nav class="navegacao-semanas" aria-label="Navegação entre semanas">
+                <a href="bim1-s2.html" class="nav-btn">&larr; Anterior: Semana 02</a>
+                <a href="index.html" class="nav-btn">Índice do 1º Bimestre</a>
+                <a href="bim1-s4.html" class="nav-btn">Próxima: Semana 04 &rarr;</a>
+            </nav>
+
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span>Lógica e Linguagem de Programação &bull; <strong>Prof. Rafael Vainisckas Lapreza</strong></span>
+            <span>1º Bimestre &bull; Semana 03</span>
+        </div>
+    </footer>
+
+</body>
+</html>

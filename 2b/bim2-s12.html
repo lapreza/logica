@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 12 – Matrizes (arrays bidimensionais) | Prof. Rafael Vainisckas Lapreza</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <a href="index.html" class="brand">
+                <span class="brand-tag">LOGICA-PROG</span>
+                <span>Lógica e Linguagem de Programação</span>
+            </a>
+            <div class="prof-badge">
+                Docente: <strong>Prof. Rafael Vainisckas Lapreza</strong>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cabeçalho da Semana -->
+    <section class="hero">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Navegação estrutural">
+                <a href="index.html">Início</a>
+                <span>/</span>
+                <a href="index.html">2º Bimestre</a>
+                <span>/</span>
+                <strong>Semana 12 (S12)</strong>
+            </nav>
+
+            <span class="kicker">2º Bimestre &bull; Semana 12 (Aulas 17 a 20)</span>
+            <h1>Matrizes (arrays bidimensionais)</h1>
+            <p class="hero-lead">
+                Nesta semana você irá manipular matrizes para declarar, percorrer e agregar dados em estruturas bidimensionais, permitindo a criação de soluções como planilhas ou o tabuleiro de um jogo.
+            </p>
+
+            <!-- Índice rápido das 4 aulas da semana -->
+            <div class="indice-aulas">
+                <a href="#aula1" class="indice-link">
+                    <span>Aula 01</span>
+                    Conceito e declaração de matrizes
+                </a>
+                <a href="#aula2" class="indice-link">
+                    <span>Aula 02</span>
+                    Percurso linha a linha
+                </a>
+                <a href="#aula3" class="indice-link">
+                    <span>Aula 03</span>
+                    Operações agregadas
+                </a>
+                <a href="#aula4" class="indice-link">
+                    <span>Aula 04</span>
+                    Desafio – jogo da velha básico
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo das 4 Aulas -->
+    <main class="bimestres-section">
+        <div class="container">
+
+            <!-- ================= AULA 1 ================= -->
+            <article id="aula1" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 12 &bull; Aula 01</span>
+                    <h2>Conceito e declaração de matrizes</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Enquanto os vetores organizam dados em uma única linha (unidimensionais), as <strong>matrizes</strong> organizam as informações em linhas e colunas (estruturas bidimensionais). Elas funcionam exatamente como uma tabela ou planilha eletrônica[cite: 3].
+                    </p>
+
+                    <h3>A Indexação por Linha e Coluna</h3>
+                    <div class="fluxo-diagrama">
+                        <strong>[0,0]</strong> &rarr; Item | <strong>[0,1]</strong> &rarr; Item <br>
+                        <strong>[1,0]</strong> &rarr; Item | <strong>[1,1]</strong> &rarr; Item
+                    </div>
+
+                    <ul>
+                        <li><strong>Duplo Endereçamento:</strong> Para acessar qualquer célula de uma matriz, precisamos informar dois índices: o primeiro indicando a linha e o segundo indicando a coluna (ex: <code>matriz[linha][coluna]</code>).</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ================= AULA 2 ================= -->
+            <article id="aula2" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 12 &bull; Aula 02</span>
+                    <h2>Percurso linha a linha</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Para visitar ou exibir todos os elementos de uma matriz, utilizamos <strong>loops aninhados</strong>: o loop externo controla as linhas e o loop interno percorre todas as colunas de cada linha correspondente[cite: 3].
+                    </p>
+
+                    <ul>
+                        <li><strong>Varredura Completa:</strong> A cada avanço de uma linha no loop externo, o loop interno executa seu ciclo inteiro visitando todas as colunas daquela linha.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ================= AULA 3 ================= -->
+            <article id="aula3" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 12 &bull; Aula 03</span>
+                    <h2>Operações agregadas</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Além de apenas exibir os dados, podemos realizar operações matemáticas agregadas sobre os valores armazenados em uma matriz, como somas por linha, somas por coluna ou cálculos globais de média e totais[cite: 3].
+                    </p>
+
+                    <table class="tabela-tecnica">
+                        <thead>
+                            <tr>
+                                <th>Operação Agregada</th>
+                                <th>Lógica de Processamento</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Soma por Linha</strong></td>
+                                <td>Percorre os elementos de uma linha específica acumulando os valores em uma variável somadora.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Soma Global</strong></td>
+                                <td>Utiliza os loops aninhados para acumular todos os valores de todas as células da matriz.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+            <!-- ================= AULA 4 ================= -->
+            <article id="aula4" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 12 &bull; Aula 04</span>
+                    <h2>Desafio – jogo da velha básico</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Nesta aula prática, aplicamos a estrutura de matrizes bidimensionais para construir a representação lógica de um tabuleiro de jogo interativo[cite: 3].
+                    </p>
+
+                    <div class="callout-pratica">
+                        <strong>Atividade Prática &bull; Tabuleiro do Jogo da Velha</strong>
+                        Desenvolver um programa que declara uma matriz $3 \times 3$ preenchida inicialmente com posições vazias, exibindo o tabuleiro formatado no terminal e permitindo a inserção de jogadas coordenadas por linha e coluna.
+                    </div>
+                </div>
+            </article>
+
+            <!-- Navegação Inferior entre Semanas -->
+            <nav class="navegacao-semanas" aria-label="Navegação entre semanas">
+                <a href="bim2-s11.html" class="nav-btn">&larr; Anterior: Semana 11</a>
+                <a href="index.html" class="nav-btn">Índice do 2º Bimestre</a>
+                <a href="bim2-s13.html" class="nav-btn">Próxima: Semana 13 &rarr;</a>
+            </nav>
+
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span>Lógica e Linguagem de Programação &bull; <strong>Prof. Rafael Vainisckas Lapreza</strong></span>
+            <span>2º Bimestre &bull; Semana 12</span>
+        </div>
+    </footer>
+
+</body>
+</html>

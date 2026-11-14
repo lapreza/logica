@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 02 – Entrada, Processamento e Saída | Prof. Rafael Vainisckas Lapreza</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <a href="index.html" class="brand">
+                <span class="brand-tag">LOGICA-PROG</span>
+                <span>Lógica e Linguagem de Programação</span>
+            </a>
+            <div class="prof-badge">
+                Docente: <strong>Prof. Rafael Vainisckas Lapreza</strong>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cabeçalho da Semana -->
+    <section class="hero">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Navegação estrutural">
+                <a href="index.html">Início</a>
+                <span>/</span>
+                <a href="index.html">1º Bimestre</a>
+                <span>/</span>
+                <strong>Semana 02 (S2)</strong>
+            </nav>
+
+            <span class="kicker">1º Bimestre &bull; Semana 02 (Aulas 05 a 08)</span>
+            <h1>Conceitos de Entrada, Processamento e Saída</h1>
+            <p class="hero-lead">
+                Nesta semana você irá aplicar as estruturas de entrada, processamento e saída de dados para construir seus primeiros programas que interagem com o usuário, recebendo informações e apresentando resultados.
+            </p>
+
+            <!-- Índice rápido das 4 aulas da semana -->
+            <div class="indice-aulas">
+                <a href="#aula1" class="indice-link">
+                    <span>Aula 01</span>
+                    Entrada de dados
+                </a>
+                <a href="#aula2" class="indice-link">
+                    <span>Aula 02</span>
+                    Processamento de dados
+                </a>
+                <a href="#aula3" class="indice-link">
+                    <span>Aula 03</span>
+                    Saída de dados
+                </a>
+                <a href="#aula4" class="indice-link">
+                    <span>Aula 04</span>
+                    Exercícios integrados (E/P/S)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo das 4 Aulas -->
+    <main class="bimestres-section">
+        <div class="container">
+
+            <!-- ================= AULA 1 ================= -->
+            <article id="aula1" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 02 &bull; Aula 01</span>
+                    <h2>Entrada de dados</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        A <strong>Entrada de dados</strong> representa o mecanismo pelo qual o programa obtém informações externas — geralmente fornecidas pelo usuário através do teclado, de sensores ou de arquivos.
+                    </p>
+
+                    <h3>O Papel da Leitura de Dados</h3>
+                    <ul>
+                        <li><strong>Interatividade:</strong> Permite que o software deixe de ser estático e reaja de acordo com o que o usuário digita (por exemplo, ler um nome, uma idade ou valores monetários).</li>
+                        <li><strong>Instruções de Leitura:</strong> Na maioria das linguagens e pseudocódigos, utilizamos comandos específicos como <code>leia()</code> ou <code>input()</code> associados a uma variável de destino.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ================= AULA 2 ================= -->
+            <article id="aula2" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 02 &bull; Aula 02</span>
+                    <h2>Processamento de dados</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        O <strong>Processamento</strong> é o coração lógico do programa. É a etapa onde os dados de entrada são manipulados, combinados, submetidos a cálculos matemáticos ou avaliados por expressões lógicas.
+                    </p>
+
+                    <div class="fluxo-diagrama">
+                        <strong>[Entrada: nota1, nota2]</strong> &rarr; <span>Processamento: (nota1 + nota2) / 2</span> &rarr; <strong>[Armazena na variável media]</strong>
+                    </div>
+
+                    <ul>
+                        <li><strong>Atribuição (<code>&lt;-</code> ou <code>=</code>):</strong> Guarda o resultado de uma operação em uma variável para uso posterior.</li>
+                        <li><strong>Operadores Aritméticos:</strong> Adição (<code>+</code>), subtração (<code>-</code>), multiplicação (<code>*</code>), divisão (<code>/</code>) e resto da divisão (<code>%</code>).</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ================= AULA 3 ================= -->
+            <article id="aula3" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 02 &bull; Aula 03</span>
+                    <h2>Saída de dados</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        A <strong>Saída de dados</strong> é a forma como o sistema devolve o resultado processado para o usuário, seja exibindo informações na tela do monitor, gerando relatórios ou gravando arquivos.
+                    </p>
+
+                    <ul>
+                        <li><strong>Comandos de Exibição:</strong> Utilizamos instruções como <code>escreva()</code>, <code>imprimir()</code> ou <code>print()</code>.</li>
+                        <li><strong>Formatação de Mensagens:</strong> Concatenar textos fixos com o valor armazenado em variáveis (por exemplo: <code>escreva("A média final é: ", media)</code>).</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ================= AULA 4 ================= -->
+            <article id="aula4" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 02 &bull; Aula 04</span>
+                    <h2>Exercícios integrados (Entrada, Processamento e Saída)</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Nesta aula prática, unimos os três pilares fundamentais da computação em um programa completo que simula um ciclo lógico real.
+                    </p>
+
+                    <table class="tabela-tecnica">
+                        <thead>
+                            <tr>
+                                <th>Etapa do Ciclo</th>
+                                <th>Exemplo Prático (Calculadora de Média)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>1. Entrada</strong></td>
+                                <td>Ler duas notas digitadas pelo usuário (<code>leia(n1)</code>, <code>leia(n2)</code>).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2. Processamento</strong></td>
+                                <td>Somar as notas e dividir por 2 (<code>media &lt;- (n1 + n2) / 2</code>).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>3. Saída</strong></td>
+                                <td>Exibir o valor da média calculada na tela (<code>escreva(media)</code>).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="callout-pratica">
+                        <strong>Atividade Prática &bull; Algoritmo de Conversão de Moeda</strong>
+                        Escrever o fluxograma e o algoritmo completo que recebe um valor em Reais, processa a conversão para Dólar com base em uma cotação fixa e exibe o resultado final formatado na tela.
+                    </div>
+                </div>
+            </article>
+
+            <!-- Navegação Inferior entre Semanas -->
+            <nav class="navegacao-semanas" aria-label="Navegação entre semanas">
+                <a href="bim1-s1.html" class="nav-btn">&larr; Anterior: Semana 01</a>
+                <a href="index.html" class="nav-btn">Índice do 1º Bimestre</a>
+                <a href="bim1-s3.html" class="nav-btn">Próxima: Semana 03 &rarr;</a>
+            </nav>
+
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span>Lógica e Linguagem de Programação &bull; <strong>Prof. Rafael Vainisckas Lapreza</strong></span>
+            <span>1º Bimestre &bull; Semana 02</span>
+        </div>
+    </footer>
+
+</body>
+</html>

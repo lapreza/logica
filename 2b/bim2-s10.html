@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 10 – Estruturas de Repetição Aninhadas | Prof. Rafael Vainisckas Lapreza</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <a href="index.html" class="brand">
+                <span class="brand-tag">LOGICA-PROG</span>
+                <span>Lógica e Linguagem de Programação</span>
+            </a>
+            <div class="prof-badge">
+                Docente: <strong>Prof. Rafael Vainisckas Lapreza</strong>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cabeçalho da Semana -->
+    <section class="hero">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Navegação estrutural">
+                <a href="index.html">Início</a>
+                <span>/</span>
+                <a href="index.html">2º Bimestre</a>
+                <span>/</span>
+                <strong>Semana 10 (S10)</strong>
+            </nav>
+
+            <span class="kicker">2º Bimestre &bull; Semana 10 (Aulas 09 a 12)</span>
+            <h1>Estruturas de Repetição Aninhadas</h1>
+            <p class="hero-lead">
+                Nesta semana você irá implementar loops aninhados para resolver problemas que exigem repetição em múltiplas dimensões, como a criação de padrões geométricos ou o processamento de tabelas.
+            </p>
+
+            <!-- Índice rápido das 4 aulas da semana -->
+            <div class="indice-aulas">
+                <a href="#aula1" class="indice-link">
+                    <span>Aula 01</span>
+                    Por que aninhar loops?
+                </a>
+                <a href="#aula2" class="indice-link">
+                    <span>Aula 02</span>
+                    Controle de variáveis independentes
+                </a>
+                <a href="#aula3" class="indice-link">
+                    <span>Aula 03</span>
+                    Complexidade e otimização
+                </a>
+                <a href="#aula4" class="indice-link">
+                    <span>Aula 04</span>
+                    Laboratório – Padrões de asteriscos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo das 4 Aulas -->
+    <main class="bimestres-section">
+        <div class="container">
+
+            <!-- ================= AULA 1 ================= -->
+            <article id="aula1" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 10 &bull; Aula 01</span>
+                    <h2>Por que aninhar loops?</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Um loop aninhado ocorre quando colocamos uma estrutura de repetição (como um <code>for</code> ou <code>while</code>) inteiramente dentro do bloco de execução de outra estrutura de repetição[cite: 3].
+                    </p>
+
+                    <h3>A Lógica de Múltiplas Dimensões</h3>
+                    <div class="fluxo-diagrama">
+                        <strong>[Loop Externo: Roda 1 vez]</strong> &rarr; <span>[Loop Interno: Roda o ciclo completo N vezes]</span> &rarr; <strong>[Loop Externo: Roda 2ª vez...]</strong>
+                    </div>
+
+                    <ul>
+                        <li><strong>Aplicação Principal:</strong> Essencial para percorrer estruturas bidimensionais (linhas e colunas), processar matrizes, gerar coordenadas ou desenhar formas geométricas no terminal.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ================= AULA 2 ================= -->
+            <article id="aula2" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 10 &bull; Aula 02</span>
+                    <h2>Controle de variáveis independentes</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Em laços aninhados, é fundamental utilizar variáveis de controle distintas para cada nível (por exemplo, usar a letra <code>i</code> para o loop externo e a letra <code>j</code> para o loop interno)[cite: 3].
+                    </p>
+
+                    <table class="tabela-tecnica">
+                        <thead>
+                            <tr>
+                                <th>Nível do Laço</th>
+                                <th>Variável de Controle</th>
+                                <th>Comportamento no Ciclo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Loop Externo</strong></td>
+                                <td><code>i</code></td>
+                                <td>Avança lentamente; muda de valor apenas quando todo o loop interno se encerra.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Loop Interno</strong></td>
+                                <td><code>j</code></td>
+                                <td>Executa todas as suas voltas completas a cada única passada do loop externo.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+            <!-- ================= AULA 3 ================= -->
+            <article id="aula3" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 10 &bull; Aula 03</span>
+                    <h2>Complexidade e otimização</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        O uso de loops aninhados multiplica o número total de iterações executadas. Se o loop externo roda 10 vezes e o interno roda 10 vezes, o bloco de dentro será executado $10 \times 10 = 100$ vezes[cite: 3].
+                    </p>
+
+                    <ul>
+                        <li><strong>Cuidado com o Desempenho:</strong> Laços aninhados excessivos ou mal dimensionados podem gerar lentidão perceptível em grandes massas de dados.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ================= AULA 4 ================= -->
+            <article id="aula4" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 10 &bull; Aula 04</span>
+                    <h2>Laboratório – Padrões de asteriscos</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Nesta aula prática de laboratório, aplicamos o conceito de repetições em múltiplas dimensões para desenhar formas e matrizes visuais diretamente no terminal[cite: 3].
+                    </p>
+
+                    <div class="callout-pratica">
+                        <strong>Atividade Prática &bull; Impressão de Matriz de Asteriscos</strong>
+                        Escrever um programa que utilize dois loops <code>for</code> aninhados para imprimir na tela um quadrado ou triângulo formado por caracteres de asterisco (`*`), controlando linhas e colunas de forma precisa.
+                    </div>
+                </div>
+            </article>
+
+            <!-- Navegação Inferior entre Semanas -->
+            <nav class="navegacao-semanas" aria-label="Navegação entre semanas">
+                <a href="bim2-s9.html" class="nav-btn">&larr; Anterior: Semana 09</a>
+                <a href="index.html" class="nav-btn">Índice do 2º Bimestre</a>
+                <a href="bim2-s11.html" class="nav-btn">Próxima: Semana 11 &rarr;</a>
+            </nav>
+
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span>Lógica e Linguagem de Programação &bull; <strong>Prof. Rafael Vainisckas Lapreza</strong></span>
+            <span>2º Bimestre &bull; Semana 10</span>
+        </div>
+    </footer>
+
+</body>
+</html>

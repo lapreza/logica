@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 11 – Vetores (arrays unidimensionais) | Prof. Rafael Vainisckas Lapreza</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <a href="index.html" class="brand">
+                <span class="brand-tag">LOGICA-PROG</span>
+                <span>Lógica e Linguagem de Programação</span>
+            </a>
+            <div class="prof-badge">
+                Docente: <strong>Prof. Rafael Vainisckas Lapreza</strong>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cabeçalho da Semana -->
+    <section class="hero">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Navegação estrutural">
+                <a href="index.html">Início</a>
+                <span>/</span>
+                <a href="index.html">2º Bimestre</a>
+                <span>/</span>
+                <strong>Semana 11 (S11)</strong>
+            </nav>
+
+            <span class="kicker">2º Bimestre &bull; Semana 11 (Aulas 13 a 16)</span>
+            <h1>Vetores (arrays unidimensionais)</h1>
+            <p class="hero-lead">
+                Nesta semana você irá manipular vetores para criar, percorrer, alterar e ordenar listas de dados, uma habilidade essencial para desenvolver algoritmos de busca e organização de informações.
+            </p>
+
+            <!-- Índice rápido das 4 aulas da semana -->
+            <div class="indice-aulas">
+                <a href="#aula1" class="indice-link">
+                    <span>Aula 01</span>
+                    Declaração e acesso a vetores
+                </a>
+                <a href="#aula2" class="indice-link">
+                    <span>Aula 02</span>
+                    Busca linear
+                </a>
+                <a href="#aula3" class="indice-link">
+                    <span>Aula 03</span>
+                    Ordenação Bubble Sort
+                </a>
+                <a href="#aula4" class="indice-link">
+                    <span>Aula 04</span>
+                    Desafio – Estatísticas de vetor
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo das 4 Aulas -->
+    <main class="bimestres-section">
+        <div class="container">
+
+            <!-- ================= AULA 1 ================= -->
+            <article id="aula1" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 11 &bull; Aula 01</span>
+                    <h2>Declaração e acesso a vetores</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Até o momento, nossas variáveis armazenavam apenas um único valor por vez. Quando precisamos guardar uma coleção de valores do mesmo tipo (como uma lista com 10 notas de alunos), utilizamos os <strong>vetores</strong> (arrays unidimensionais)[cite: 3].
+                    </p>
+
+                    <h3>A Estrutura de Índices</h3>
+                    <div class="fluxo-diagrama">
+                        <strong>[Índice 0]</strong> &rarr; 8.5 | <strong>[Índice 1]</strong> &rarr; 7.0 | <strong>[Índice 2]</strong> &rarr; 9.2 | <strong>[Índice 3]</strong> &rarr; 6.5
+                    </div>
+
+                    <ul>
+                        <li><strong>Indexação Baseada em Zero:</strong> Em quase todas as linguagens de programação, o primeiro elemento de um vetor ocupa sempre a posição <code>0</code>, o segundo a posição <code>1</code>, e assim por diante até o limite de tamanho estipulado.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ================= AULA 2 ================= -->
+            <article id="aula2" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 11 &bull; Aula 02</span>
+                    <h2>Busca linear</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        A <strong>busca linear</strong> (ou sequencial) é o algoritmo mais simples para encontrar um elemento dentro de um vetor. Ele consiste em percorrer a lista item por item, desde o início até o final, comparando cada posição com o valor procurado[cite: 3].
+                    </p>
+
+                    <ul>
+                        <li><strong>Funcionamento:</strong> Se o elemento for encontrado, o algoritmo retorna a posição (índice) correspondente; se percorrer toda a lista sem encontrar, sinaliza que o dado não existe no vetor.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ================= AULA 3 ================= -->
+            <article id="aula3" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 11 &bull; Aula 03</span>
+                    <h2>Ordenação Bubble Sort</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Para organizar os dados de um vetor em ordem crescente ou decrescente, utilizamos algoritmos clássicos de ordenação, sendo o <strong>Bubble Sort</strong> (método da bolha) o ponto de partida ideal para o aprendizado lógico[cite: 3].
+                    </p>
+
+                    <table class="tabela-tecnica">
+                        <thead>
+                            <tr>
+                                <th>Método de Ordenação</th>
+                                <th>Lógica de Execução</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Bubble Sort</strong></td>
+                                <td>Compara elementos adjacentes em pares repetidas vezes, trocando-os de lugar caso estejam na ordem incorreta, fazendo com que os maiores valores "flutuem" para o final da lista.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+            <!-- ================= AULA 4 ================= -->
+            <article id="aula4" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 11 &bull; Aula 04</span>
+                    <h2>Desafio – Estatísticas de vetor</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Nesta aula prática, unimos a manipulação de vetores, laços de repetição e condicionais para processar estatísticas completas de um conjunto de dados[cite: 3].
+                    </p>
+
+                    <div class="callout-pratica">
+                        <strong>Atividade Prática &bull; Análise de Temperaturas em Vetor</strong>
+                        Escrever um programa que armazena temperaturas semanais em um vetor de 7 posições, calculando e exibindo a temperatura média, a menor temperatura registrada e a maior temperatura da semana.
+                    </div>
+                </div>
+            </article>
+
+            <!-- Navegação Inferior entre Semanas -->
+            <nav class="navegacao-semanas" aria-label="Navegação entre semanas">
+                <a href="bim2-s10.html" class="nav-btn">&larr; Anterior: Semana 10</a>
+                <a href="index.html" class="nav-btn">Índice do 2º Bimestre</a>
+                <a href="bim2-s12.html" class="nav-btn">Próxima: Semana 12 &rarr;</a>
+            </nav>
+
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span>Lógica e Linguagem de Programação &bull; <strong>Prof. Rafael Vainisckas Lapreza</strong></span>
+            <span>2º Bimestre &bull; Semana 11</span>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 20 – Backup, recuperação e continuidade de negócio | Prof. Rafael Vainisckas Lapreza</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <a href="index.html" class="brand">
+                <span class="brand-tag">LOGICA-PROG</span>
+                <span>Lógica e Linguagem de Programação</span>
+            </a>
+            <div class="prof-badge">
+                Docente: <strong>Prof. Rafael Vainisckas Lapreza</strong>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cabeçalho da Semana -->
+    <section class="hero">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Navegação estrutural">
+                <a href="index.html">Início</a>
+                <span>/</span>
+                <a href="index.html">3º Bimestre</a>
+                <span>/</span>
+                <strong>Semana 20 (S20)</strong>
+            </nav>
+
+            <span class="kicker">3º Bimestre &bull; Semana 20 (Aulas 21 a 24)</span>
+            <h1>Backup, recuperação e continuidade de negócio</h1>
+            <p class="hero-lead">
+                Nesta semana você irá aprender a manipular arquivos para processar grandes volumes de dados de forma eficiente, permitindo que seus programas leiam e gravem informações de maneira persistente[cite: 2].
+            </p>
+
+            <!-- Índice rápido das 4 aulas da semana -->
+            <div class="indice-aulas">
+                <a href="#aula1" class="indice-link">
+                    <span>Aula 01</span>
+                    Arquivos – entrada e saída
+                </a>
+                <a href="#aula2" class="indice-link">
+                    <span>Aula 02</span>
+                    Leitura linha a linha
+                </a>
+                <a href="#aula3" class="indice-link">
+                    <span>Aula 03</span>
+                    Escrita de relatórios
+                </a>
+                <a href="#aula4" class="indice-link">
+                    <span>Aula 04</span>
+                    Integração com CSV
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo das 4 Aulas -->
+    <main class="bimestres-section">
+        <div class="container">
+
+            <!-- ================= AULA 1 ================= -->
+            <article id="aula1" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 20 &bull; Aula 01</span>
+                    <h2>Arquivos – entrada e saída</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Até agora, os dados dos nossos programas eram voláteis (perdidos ao fechar a execução). A manipulação de arquivos (E/S ou I/O) garante a persistência das informações em disco[cite: 2].
+                    </p>
+
+                    <h3>Conceitos de Persistência</h3>
+                    <ul>
+                        <li><strong>Modos de Abertura:</strong> Leitura (`r`), escrita (`w`) e anexação (`a`), permitindo gerenciar o ciclo de vida dos dados externos.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ================= AULA 2 ================= -->
+            <article id="aula2" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 20 &bull; Aula 02</span>
+                    <h2>Leitura linha a linha</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Para processar grandes volumes de dados textuais sem esgotar a memória RAM, utilizamos a leitura sequencial fracionada, percorrendo o arquivo linha por linha[cite: 2].
+                    </p>
+
+                    <div class="fluxo-diagrama">
+                        <strong>[Arquivo em Disco]</strong> &rarr; Lê Linha 1 &rarr; Lê Linha 2 &rarr; <strong>[Processamento Iterativo]</strong>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ================= AULA 3 ================= -->
+            <article id="aula3" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 20 &bull; Aula 03</span>
+                    <h2>Escrita de relatórios</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        A capacidade de gerar arquivos de texto estruturados em disco permite que os algoritmos produzam relatórios consolidados automáticos para análise posterior[cite: 2].
+                    </p>
+
+                    <table class="tabela-tecnica">
+                        <thead>
+                            <tr>
+                                <th>Operação de Escrita</th>
+                                <th>Comportamento Técnico</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Sobrescrita (`w`)</strong></td>
+                                <td>Cria um novo arquivo ou substitui integralmente o conteúdo pré-existente.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Anexação (`a`)</strong></td>
+                                <td>Adiciona novos registros ao final do arquivo preservando o histórico anterior.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+            <!-- ================= AULA 4 ================= -->
+            <article id="aula4" class="aula-bloco">
+                <div class="aula-header">
+                    <span class="aula-numero">Semana 20 &bull; Aula 04</span>
+                    <h2>Integração com CSV</h2>
+                </div>
+                <div class="aula-conteudo">
+                    <p>
+                        Nesta aula prática, aplicamos a persistência de arquivos para ler e gravar dados tabulares estruturados no formato padrão CSV (Comma-Separated Values)[cite: 2].
+                    </p>
+
+                    <div class="callout-pratica">
+                        <strong>Atividade Prática &bull; Processador de Arquivos CSV</strong>
+                        Desenvolver um sistema que lê uma base de dados tabulares em formato CSV, realiza filtragens lógicas e grava um novo relatório persistido em disco.
+                    </div>
+                </div>
+            </article>
+
+            <!-- Navegação Inferior entre Semanas -->
+            <nav class="navegacao-semanas" aria-label="Navegação entre semanas">
+                <a href="bim3-s19.html" class="nav-btn">&larr; Anterior: Semana 19</a>
+                <a href="index.html" class="nav-btn">Índice do 3º Bimestre</a>
+                <span class="nav-btn disabled">Fim do 3º Bimestre</span>
+            </nav>
+
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span>Lógica e Linguagem de Programação &bull; <strong>Prof. Rafael Vainisckas Lapreza</strong></span>
+            <span>3º Bimestre &bull; Semana 20</span>
+        </div>
+    </footer>
+
+</body>
+</html>
